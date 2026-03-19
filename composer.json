@@ -117,7 +117,7 @@
     "extra": {
         "drupal-scaffold": {
             "locations": {
-                "web-root": "web/"
+                "web-root": "public_html/"
             },
             "file-mapping": {
                 "[web-root]/example.gitignore": false
@@ -127,16 +127,16 @@
             ]
         },
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "public_html/core": ["type:drupal-core"],
+            "public_html/libraries/{$name}": ["type:drupal-library"],
+            "public_html/modules/contrib/{$name}": ["type:drupal-module"],
+            "public_html/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "public_html/themes/contrib/{$name}": ["type:drupal-theme"],
             "./drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "public_html/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "public_html/profiles/custom/{$name}": ["type:drupal-custom-profile"],
             "./recipes/{$name}": ["type:drupal-recipe"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+            "public_html/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
         "drupal-core-vendor-hardening": {
             "composer/composer": false

@@ -10,7 +10,7 @@ If you want to use [DDEV](https://ddev.com) to run Drupal CMS locally, follow th
 2. Open the command line and `cd` to the root directory of this project
 3. Run the following commands:
 ```shell
-ddev config --project-type=drupal11 --docroot=web
+ddev config --project-type=drupal11 --docroot=public_html
 ddev start
 ddev composer install
 ddev composer drupal:recipe-unpack

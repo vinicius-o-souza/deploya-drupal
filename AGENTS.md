@@ -25,7 +25,7 @@ git clone git@github.com:vinicius-o-souza/deploya-drupal.git deploya
 cd deploya
 
 # Initialize DDEV configuration
-ddev config --project-type=drupal11 --docroot=web
+ddev config --project-type=drupal11 --docroot=public_html
 
 # Start DDEV environment
 ddev start
@@ -56,7 +56,7 @@ ddev export-db            # Export database to file
 
 # Development tools
 ddev <command>            # Execute command in container
-ddev ssh                  # SSH into web container
+ddev ssh                  # SSH into public_html container
 ddev logs                 # View container logs
 ddev describe             # Show environment details
 ddev launch               # Open site in browser
@@ -68,9 +68,9 @@ Create `.ddev/config.yaml` for project-specific settings:
 ```yaml
 # .ddev/config.yaml
 type: drupal
-docroot: web
+docroot: public_html
 php_version: "8.4"
-webserver_type: nginx-fpm
+public_htmlserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
@@ -79,7 +79,7 @@ additional_fqdns: []
 
 # Drupal-specific settings
 disable_settings_management: false
-web_environment:
+public_html_environment:
   - DRUSH_OPTIONS_URI=https://my-drupal-project.ddev.site
 ```
 
@@ -93,9 +93,9 @@ web_environment:
 ## Guardrails
 
 - Do not commit secrets or machine-local overrides such as `.env`, `settings.local.php`, or `.ddev/config.local.yaml`.
-- Do not commit `vendor/` or uploaded files under `web/sites/*/files`.
+- Do not commit `vendor/` or uploaded files under `public_html/sites/*/files`.
 - Do not edit Drupal core or contributed projects in place.
-- Put custom code in `web/modules/custom` and `web/themes/custom`.
+- Put custom code in `public_html/modules/custom` and `public_html/themes/custom`.
 
 
 ## Code Style and Standards
@@ -202,10 +202,10 @@ Adhere to Drupal coding standards (PSR-12 with Drupal extensions). Use Coder and
 ## DDEV Development Workflow
 
 ### Project Structure
-- **Modules** → `web/modules/custom/<module_name>`
-- **Themes** → `web/themes/custom/<theme_name>`
+- **Modules** → `public_html/modules/custom/<module_name>`
+- **Themes** → `public_html/themes/custom/<theme_name>`
 - **Configuration** → Export with `ddev exec drush config:export`
-- **Profiles** → `web/profiles/custom/<profile_name>`
+- **Profiles** → `public_html/profiles/custom/<profile_name>`
 
 ### Essential Development Commands
 ```bash
@@ -290,7 +290,7 @@ ddev exec drush updatedb              # Run database updates
 # xdebug_enabled: true
 
 # DDEV container debugging
-ddev logs -f web                       # Follow web container logs
+ddev logs -f public_html                       # Follow public_html container logs
 ddev logs -f db                        # Follow database container logs
 ddev describe                          # Show environment details and status
 
@@ -312,8 +312,8 @@ ddev exec drush cr                     # Rebuild caches
 ddev exec drush sql:query "EXPLAIN ANALYZE SELECT ..."  # Query analysis
 ddev exec drush site:status           # System status check
 
-# Use Webprofiler module for detailed profiling
-# Access at https://my-drupal-project.ddev.site/admin/config/development/devel/webprofiler
+# Use public_htmlprofiler module for detailed profiling
+# Access at https://my-drupal-project.ddev.site/admin/config/development/devel/public_htmlprofiler
 ```
 
 ### Version Control Workflow
@@ -339,7 +339,7 @@ ddev exec vendor/bin/phpunit --testsuite javascript     # JavaScript tests
 
 # Run specific tests
 ddev exec vendor/bin/phpunit --filter MyModuleUnitTest
-ddev exec vendor/bin/phpunit web/modules/custom/my_module/tests/src/Unit/
+ddev exec vendor/bin/phpunit public_html/modules/custom/my_module/tests/src/Unit/
 
 # Run with custom configuration
 SIMPLETEST_DB=sqlite://localhost/tmp.sqlite ddev exec vendor/bin/phpunit
@@ -376,7 +376,7 @@ SIMPLETEST_DB=sqlite://localhost/tmp.sqlite ddev exec vendor/bin/phpunit
 - **Location**: Place in `tests/src/Functional/` directory
 - **Use cases**: Form submissions, page access, user permissions, JavaScript interactions
 - **Browser simulation**: Uses Goutte/ChromeDriver for browser automation
-- **Assertions**: Use `$this->assertSession()` for web assertions
+- **Assertions**: Use `$this->assertSession()` for public_html assertions
 
 ### Code Quality Tools in DDEV
 ```bash
@@ -466,7 +466,7 @@ ddev exec drush watchdog:show --type=cron
 ```bash
 # PHPUnit configuration problems
 # Ensure phpunit.xml.dist exists and is configured
-cp web/core/phpunit.xml.dist phpunit.xml
+cp public_html/core/phpunit.xml.dist phpunit.xml
 
 # Database setup for testing
 # Edit phpunit.xml for SIMPLETEST_DB and SIMPLETEST_BASE_URL

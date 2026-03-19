@@ -14,5 +14,5 @@
 /profiles/contrib
 /themes/contrib
 
-# PHP scripts scaffolded into the web root by Drupal core.
+# PHP scripts scaffolded into the public_html root by Drupal core.
 /*.php
