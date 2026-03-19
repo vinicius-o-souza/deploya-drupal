@@ -49,6 +49,7 @@
 /web/INSTALL.txt
 /web/LICENSE.txt
 /web/README.txt
+/web/README.md
 /web/robots.txt
 /web/update.php
 /web/web.config
@@ -63,3 +64,5 @@
 /drush
 /drupal.phar
 /drupal
+/recipes
+/web/profiles/*
