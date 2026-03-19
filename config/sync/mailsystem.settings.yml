@@ -1,4 +1,4 @@
-theme: easy_email_theme
+theme: gin
 defaults:
   sender: symfony_mailer_lite
   formatter: symfony_mailer_lite
