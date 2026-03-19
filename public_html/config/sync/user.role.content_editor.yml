@@ -24,7 +24,6 @@ dependencies:
     - redirect
     - scheduler
     - system
-    - trash
 _core:
   default_config_hash: g-zSnaBXJnH7VoimReFb6KcLjIgHCU-hisiShtZ9hjQ
 id: content_editor
@@ -35,7 +34,6 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access media overview'
-  - 'access trash'
   - 'administer menu'
   - 'administer redirects'
   - 'administer url aliases'

@@ -7,8 +7,6 @@ dependencies:
     - views.view.recent_content
     - views.view.recent_pages
   module:
-    - announcements_feed
-    - drupical
     - layout_builder
     - system
     - views
@@ -88,28 +86,6 @@ layout:
       label: 'Announcements and Events'
       context_mapping: {  }
       column_widths: 50-50
-    components:
-      f7bdc8cb-8be7-4cff-8124-ff0b45aefd36:
-        uuid: f7bdc8cb-8be7-4cff-8124-ff0b45aefd36
-        region: second
-        configuration:
-          id: events_block
-          label: 'Drupal Events'
-          label_display: visible
-          provider: drupical
-          context_mapping: {  }
-        weight: 0
-        additional: {  }
-      483f7721-56c2-478d-9779-1e77fedc364e:
-        uuid: 483f7721-56c2-478d-9779-1e77fedc364e
-        region: first
-        configuration:
-          id: announce_block
-          label: 'Announcements Feed'
-          label_display: visible
-          provider: announcements_feed
-          context_mapping: {  }
-        weight: 0
-        additional: {  }
+    components: {  }
     third_party_settings: {  }
 weight: 0

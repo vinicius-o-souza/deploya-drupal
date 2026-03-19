@@ -5,5 +5,4 @@ dependencies: {  }
 name: Drupical
 configEntityTypeId: component
 weight: 0
-items:
-  - block.events_block
+items: {  }
