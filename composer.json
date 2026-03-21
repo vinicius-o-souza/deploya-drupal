@@ -82,7 +82,13 @@
         "league/commonmark": "^2.4"
     },
     "require-dev": {
-        "drush/drush": "^13.7"
+        "drupal/coder": "^9.0",
+        "drush/drush": "^13.7",
+        "mglaman/phpstan-drupal": "^2.0",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "squizlabs/php_codesniffer": "^4.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -92,11 +98,13 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-recipe-unpack": true,
             "drupal/core-vendor-hardening": true,
             "drupal/site_template_helper": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true
         },
         "bin-dir": "vendor/bin",
         "sort-packages": true,
