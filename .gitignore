@@ -65,3 +65,25 @@
 /drupal.phar
 /drupal
 /recipes
+
+# Backup files
+*.bak
+*.backup
+*.swp
+*.swo
+*.tmp
+*.log
+*.sql
+*.tar.gz
+*.zip
+*.tar
+*.7z
+*.gz
+*.bz2
+*.old
+*.orig
+*.rej
+*.diff
+*.patch
+*.DS_Store
+*.Thumbs.db

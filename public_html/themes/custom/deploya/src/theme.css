@@ -9,12 +9,12 @@
  */
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.13 0.043 265.132);
+  --background: #FFFFFF;
+  --foreground: #2A2A2A;
   --card: oklch(0.967 0.003 264.542);
   --card-foreground: oklch(0.21 0.032 264.665);
   --primary: oklch(0.547 0.246 262.866);
-  --primary-foreground: oklch(1 0 0);
+  --primary-foreground: #FFFFFF;
   --secondary: oklch(0.9219 0 0);
   --secondary-foreground: oklch(0.28 0.041 260.329);
   --muted: oklch(0.967 0.003 264.542);
@@ -22,7 +22,7 @@
   --accent: oklch(0.932 0.032 255.585);
   --accent-foreground: var(--foreground);
   --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: oklch(1 0 0);
+  --destructive-foreground: #FFFFFF;
   --border: oklch(0.872 0.009 258.338);
   --input: oklch(0.872 0.009 258.338);
   --font-sans: "Outfit", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -55,7 +55,7 @@
 }
 
 .dark {
-  --background: oklch(0.13 0.043 265.132);
+  --background: #2A2A2A;
   --foreground: oklch(1 0 89.876);
   --card: oklch(0.208 0.042 266.359);
   --card-foreground: var(--foreground);
@@ -68,7 +68,7 @@
   --accent: oklch(0.932 0.032 255.585);
   --accent-foreground: oklch(0.13 0.043 265.132);
   --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: oklch(1 0 0);
+  --destructive-foreground: #FFFFFF;
   --border: oklch(0.373 0.031 259.733);
   --input: oklch(0.373 0.031 259.733);
   --font-sans: "Outfit", "Helvetica Neue", Arial, Helvetica, sans-serif;
