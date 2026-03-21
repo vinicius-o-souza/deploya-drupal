@@ -1,0 +1,10 @@
+uuid: 34eef57d-4ffa-4328-8c07-82f6e76d9a9d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - deploya
+id: deploya.footer
+region: footer
+theme: deploya
+component_tree: {  }

@@ -1,8 +1,0 @@
-uuid: 4dc670dc-0ab6-4445-99de-bbb1051606f9
-langcode: en
-status: true
-dependencies: {  }
-name: Drupical
-configEntityTypeId: component
-weight: 0
-items: {  }

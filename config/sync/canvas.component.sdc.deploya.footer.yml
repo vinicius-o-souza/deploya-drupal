@@ -1,16 +1,9 @@
-uuid: 90361976-c4cd-462c-a7bf-482fde00c6e6
+uuid: e008de02-01b6-48db-b26a-840e55de3795
 langcode: en
 status: true
 dependencies:
   theme:
-    - mercury
-_core:
-  default_config_hash: K9O7_fh4A3gKPx_UU2qn0vosz3ckrpdOlruhW5ZfLI8
-label: Footer
-id: sdc.mercury.footer
-source: sdc
-source_local_id: 'mercury:footer'
-provider: mercury
+    - deploya
 active_version: d696cea1796b650e
 versioned_properties:
   active:
@@ -36,3 +29,8 @@ versioned_properties:
           title: 'Utility links'
         footer_utility_last:
           title: 'Copyright text'
+label: Footer
+id: sdc.deploya.footer
+provider: deploya
+source: sdc
+source_local_id: 'deploya:footer'

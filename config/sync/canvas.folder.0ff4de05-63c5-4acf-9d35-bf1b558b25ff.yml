@@ -6,7 +6,9 @@ name: Hero
 configEntityTypeId: component
 weight: 0
 items:
+  - sdc.deploya.cta
+  - sdc.deploya.hero-billboard
+  - sdc.deploya.hero-blog
+  - sdc.deploya.hero-side-by-side
   - sdc.mercury.cta
   - sdc.mercury.hero-billboard
-  - sdc.mercury.hero-blog
-  - sdc.mercury.hero-side-by-side

@@ -6,11 +6,15 @@ name: Base
 configEntityTypeId: component
 weight: 0
 items:
-  - sdc.mercury.anchor
-  - sdc.mercury.badge
-  - sdc.mercury.blockquote
+  - sdc.deploya.anchor
+  - sdc.deploya.badge
+  - sdc.deploya.blockquote
+  - sdc.deploya.button
+  - sdc.deploya.heading
+  - sdc.deploya.icon
+  - sdc.deploya.image
+  - sdc.deploya.text
   - sdc.mercury.button
   - sdc.mercury.heading
   - sdc.mercury.icon
-  - sdc.mercury.image
   - sdc.mercury.text

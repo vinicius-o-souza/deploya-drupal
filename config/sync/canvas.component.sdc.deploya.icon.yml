@@ -1,18 +1,11 @@
-uuid: 246d04f6-ea66-422a-9d7b-589b4072f3db
+uuid: a3a88cfc-4089-411e-8a0b-d1d84c6ea48c
 langcode: en
 status: true
 dependencies:
   module:
     - options
   theme:
-    - mercury
-_core:
-  default_config_hash: FY90bobTfZnAv23YMm4MOzkIMpsZ5DmC9XGmXjyAdQc
-label: Icon
-id: sdc.mercury.icon
-source: sdc
-source_local_id: 'mercury:icon'
-provider: mercury
+    - deploya
 active_version: 7d2cdaeca3752d68
 versioned_properties:
   active:
@@ -41,3 +34,8 @@ versioned_properties:
           expression: ℹ︎list_string␟value
     fallback_metadata:
       slot_definitions: {  }
+label: Icon
+id: sdc.deploya.icon
+provider: deploya
+source: sdc
+source_local_id: 'deploya:icon'

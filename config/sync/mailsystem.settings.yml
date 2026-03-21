@@ -7,7 +7,3 @@ modules:
     none:
       sender: symfony_mailer_lite
       formatter: symfony_mailer_lite
-  easy_email:
-    none:
-      sender: symfony_mailer_lite
-      formatter: symfony_mailer_lite

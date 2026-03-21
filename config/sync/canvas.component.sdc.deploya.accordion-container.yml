@@ -1,16 +1,9 @@
-uuid: d1577459-22da-4290-95c4-1126b6492910
+uuid: 44149cf0-ba74-47dd-80f9-5893de828994
 langcode: en
 status: true
 dependencies:
   theme:
-    - mercury
-_core:
-  default_config_hash: V6ewPKSf-9ySeoZjFSuSsyPtaPxldZEMF4egmjzfgF0
-label: 'Accordion container'
-id: sdc.mercury.accordion-container
-source: sdc
-source_local_id: 'mercury:accordion-container'
-provider: mercury
+    - deploya
 active_version: 6d6367123c15a82a
 versioned_properties:
   active:
@@ -21,3 +14,8 @@ versioned_properties:
         accordion_content:
           title: 'Accordion content'
           description: 'Only one of collapsible sections added can be open at a time.'
+label: 'Accordion container'
+id: sdc.deploya.accordion-container
+provider: deploya
+source: sdc
+source_local_id: 'deploya:accordion-container'

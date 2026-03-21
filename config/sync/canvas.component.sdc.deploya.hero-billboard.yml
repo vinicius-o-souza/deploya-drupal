@@ -1,24 +1,26 @@
-uuid: 478ef2a3-acd8-4121-839d-5424dac7b92c
+uuid: 88ebe970-143c-4448-b361-dee00e8f29e0
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - field.field.media.svg_image.field_media_svg_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - media.type.svg_image
   module:
+    - file
+    - media
+    - media_library
     - options
   theme:
-    - mercury
-_core:
-  default_config_hash: CwzSGDDMffvmkKpJjBL6txVHIjNUa6dSMwtU2M79_S8
-label: Group
-id: sdc.mercury.group
-source: sdc
-source_local_id: 'mercury:group'
-provider: mercury
-active_version: 5b8517841c0015ea
+    - deploya
+active_version: 69e1345b50b2f63c
 versioned_properties:
   active:
     settings:
       prop_field_definitions:
-        flex_direction:
+        height:
           required: true
           field_type: list_string
           field_storage_settings:
@@ -27,20 +29,9 @@ versioned_properties:
           field_widget: options_select
           default_value:
             -
-              value: column
+              value: full
           expression: ℹ︎list_string␟value
-        flex_gap:
-          required: false
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: md
-          expression: ℹ︎list_string␟value
-        items_align:
+        flex_position:
           required: true
           field_type: list_string
           field_storage_settings:
@@ -49,9 +40,20 @@ versioned_properties:
           field_widget: options_select
           default_value:
             -
-              value: start
+              value: center-left
           expression: ℹ︎list_string␟value
-        flex_align:
+        overlay_opacity:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: 0%
+          expression: ℹ︎list_string␟value
+        object_position:
           required: true
           field_type: list_string
           field_storage_settings:
@@ -62,38 +64,36 @@ versioned_properties:
             -
               value: center
           expression: ℹ︎list_string␟value
-        radius:
+        media:
           required: false
-          field_type: list_string
+          field_type: entity_reference
           field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+        overlap_navbar:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
           field_instance_settings: {  }
-          field_widget: options_select
+          field_widget: boolean_checkbox
           default_value:
             -
-              value: sm
-          expression: ℹ︎list_string␟value
-        padding:
-          required: false
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: sm
-          expression: ℹ︎list_string␟value
-        background:
-          required: false
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value: null
-          expression: ℹ︎list_string␟value
+              value: false
+          expression: ℹ︎boolean␟value
     fallback_metadata:
       slot_definitions:
-        group_slot:
-          title: 'Group items'
+        hero_slot:
+          title: 'Hero content'
+label: 'Hero billboard'
+id: sdc.deploya.hero-billboard
+provider: deploya
+source: sdc
+source_local_id: 'deploya:hero-billboard'

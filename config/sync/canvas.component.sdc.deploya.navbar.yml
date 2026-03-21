@@ -1,18 +1,11 @@
-uuid: b5ef5101-42eb-4353-884f-eddd053b42ed
+uuid: 78f6e196-33eb-4113-8e25-9843258e93f2
 langcode: en
 status: true
 dependencies:
   module:
     - options
   theme:
-    - mercury
-_core:
-  default_config_hash: XGYT2I0gKw5WkZHzWtxHnXLiXBTIHuevif1xgxgt_-0
-label: Navbar
-id: sdc.mercury.navbar
-source: sdc
-source_local_id: 'mercury:navbar'
-provider: mercury
+    - deploya
 active_version: 3149f199d66bbc29
 versioned_properties:
   active:
@@ -37,3 +30,8 @@ versioned_properties:
           title: 'Navigation menu'
         links:
           title: CTAs
+label: Navbar
+id: sdc.deploya.navbar
+provider: deploya
+source: sdc
+source_local_id: 'deploya:navbar'

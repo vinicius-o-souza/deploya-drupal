@@ -1,4 +1,4 @@
-uuid: 71869c48-854e-4fb9-8601-d7ee730fc6a8
+uuid: 58ec2e05-e8df-48e5-96ee-04028d335b6c
 langcode: en
 status: true
 dependencies:
@@ -14,20 +14,13 @@ dependencies:
     - media_library
     - options
   theme:
-    - mercury
-_core:
-  default_config_hash: vgDIfqGDZFsksff4q7cmrQg6hbrmmfSIgrFH43wTDa8
-label: 'Hero billboard'
-id: sdc.mercury.hero-billboard
-source: sdc
-source_local_id: 'mercury:hero-billboard'
-provider: mercury
-active_version: 69e1345b50b2f63c
+    - deploya
+active_version: a917d5c9be8f2830
 versioned_properties:
   active:
     settings:
       prop_field_definitions:
-        height:
+        width:
           required: true
           field_type: list_string
           field_storage_settings:
@@ -36,9 +29,9 @@ versioned_properties:
           field_widget: options_select
           default_value:
             -
-              value: full
+              value: 100%
           expression: ℹ︎list_string␟value
-        flex_position:
+        columns:
           required: true
           field_type: list_string
           field_storage_settings:
@@ -47,9 +40,18 @@ versioned_properties:
           field_widget: options_select
           default_value:
             -
-              value: center-left
+              value: 50-50
           expression: ℹ︎list_string␟value
-        overlay_opacity:
+        views_columns:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        mobile_columns:
           required: true
           field_type: list_string
           field_storage_settings:
@@ -58,9 +60,9 @@ versioned_properties:
           field_widget: options_select
           default_value:
             -
-              value: 0%
+              value: '1'
           expression: ℹ︎list_string␟value
-        object_position:
+        margin_block_start:
           required: true
           field_type: list_string
           field_storage_settings:
@@ -69,9 +71,51 @@ versioned_properties:
           field_widget: options_select
           default_value:
             -
-              value: center
+              value: '48'
           expression: ℹ︎list_string␟value
-        media:
+        margin_block_end:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: '48'
+          expression: ℹ︎list_string␟value
+        padding_block_start:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: '0'
+          expression: ℹ︎list_string␟value
+        padding_block_end:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: '0'
+          expression: ℹ︎list_string␟value
+        background_color:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        background_media:
           required: false
           field_type: entity_reference
           field_storage_settings:
@@ -85,82 +129,7 @@ versioned_properties:
           field_widget: media_library_widget
           default_value: {  }
           expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
-        overlap_navbar:
-          default_value:
-            -
-              value: false
-          expression: ℹ︎boolean␟value
-          field_instance_settings: {  }
-          field_storage_settings: {  }
-          field_type: boolean
-          field_widget: boolean_checkbox
-          required: false
-    fallback_metadata:
-      slot_definitions:
-        hero_slot:
-          title: 'Hero content'
-  1a5aa5ee467ccdcd:
-    settings:
-      prop_field_definitions:
-        height:
-          required: true
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: full
-          expression: ℹ︎list_string␟value
-        flex_position:
-          required: true
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: center-left
-          expression: ℹ︎list_string␟value
-        overlay_opacity:
-          required: true
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: 0%
-          expression: ℹ︎list_string␟value
-        object_position:
-          required: true
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: center
-          expression: ℹ︎list_string␟value
-        media:
-          required: false
-          field_type: entity_reference
-          field_storage_settings:
-            target_type: media
-          field_instance_settings:
-            handler: 'default:media'
-            handler_settings:
-              target_bundles:
-                image: image
-                svg_image: svg_image
-          field_widget: media_library_widget
-          default_value: {  }
-          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
-        overlap_navbar:
+        section_header:
           required: false
           field_type: boolean
           field_storage_settings: {  }
@@ -168,9 +137,28 @@ versioned_properties:
           field_widget: boolean_checkbox
           default_value:
             -
-              value: false
+              value: true
+          expression: ℹ︎boolean␟value
+        section_footer:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
           expression: ℹ︎boolean␟value
     fallback_metadata:
       slot_definitions:
-        hero_slot:
-          title: 'Hero content'
+        header_slot:
+          title: Header
+        main_slot:
+          title: Grid
+        footer_slot:
+          title: Footer
+label: Section
+id: sdc.deploya.section
+provider: deploya
+source: sdc
+source_local_id: 'deploya:section'

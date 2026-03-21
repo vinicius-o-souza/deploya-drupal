@@ -1,41 +1,57 @@
-uuid: ab3713ff-e8de-4f54-952c-11066c137738
+uuid: ba4f4176-1948-4687-83dc-59cfdcb526a3
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - field.field.media.svg_image.field_media_svg_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - media.type.svg_image
   module:
-    - link
+    - file
+    - media
+    - media_library
     - options
   theme:
-    - mercury
-_core:
-  default_config_hash: c5zvZir5ZsJnhU5j_iUdK76SX6xT9NnfRVBrQ703Yi8
-active_version: fee1c60088ebfe2f
+    - deploya
+active_version: 39c3518b4824ac2a
 versioned_properties:
   active:
     settings:
       prop_field_definitions:
-        heading_text:
-          required: true
-          field_type: string
-          field_storage_settings: {  }
-          field_instance_settings: {  }
-          field_widget: string_textfield
-          default_value:
-            -
-              value: 'Your heading goes here'
-          expression: ℹ︎string␟value
-        level:
-          required: true
-          field_type: list_float
+        hero_flex_gap:
+          required: false
+          field_type: list_string
           field_storage_settings:
             allowed_values_function: canvas_load_allowed_values_for_component_prop
           field_instance_settings: {  }
           field_widget: options_select
           default_value:
             -
-              value: '2'
-          expression: ℹ︎list_float␟value
-        text_size:
+              value: large
+          expression: ℹ︎list_string␟value
+        hero_flex_direction_mobile:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: vertical
+          expression: ℹ︎list_string␟value
+        background:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_block_start:
           required: true
           field_type: list_string
           field_storage_settings:
@@ -44,9 +60,9 @@ versioned_properties:
           field_widget: options_select
           default_value:
             -
-              value: heading-responsive-4xl
+              value: '0'
           expression: ℹ︎list_string␟value
-        text_color:
+        padding_block_end:
           required: true
           field_type: list_string
           field_storage_settings:
@@ -55,10 +71,21 @@ versioned_properties:
           field_widget: options_select
           default_value:
             -
-              value: default
+              value: '0'
           expression: ℹ︎list_string␟value
-        align:
-          required: true
+        image_size:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: '4:3'
+          expression: ℹ︎list_string␟value
+        image_position:
+          required: false
           field_type: list_string
           field_storage_settings:
             allowed_values_function: canvas_load_allowed_values_for_component_prop
@@ -68,87 +95,37 @@ versioned_properties:
             -
               value: left
           expression: ℹ︎list_string␟value
-        url:
+        image_radius:
           required: false
-          field_type: link
-          field_storage_settings: {  }
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: small
+          expression: ℹ︎list_string␟value
+        media:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
           field_instance_settings:
-            title: 0
-            link_type: 17
-          field_widget: link_default
-          default_value: null
-          expression: ℹ︎link␟url
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
     fallback_metadata:
-      slot_definitions: {  }
-  bba852857675de5f:
-    settings:
-      prop_field_definitions:
-        heading_text:
-          required: true
-          field_type: string
-          field_storage_settings: {  }
-          field_instance_settings: {  }
-          field_widget: string_textfield
-          default_value:
-            -
-              value: 'Your heading goes here'
-          expression: ℹ︎string␟value
-        level:
-          required: true
-          field_type: list_float
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: '2'
-          expression: ℹ︎list_float␟value
-        text_size:
-          required: true
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: heading-responsive-4xl
-          expression: ℹ︎list_string␟value
-        text_color:
-          required: true
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: default
-          expression: ℹ︎list_string␟value
-        align:
-          required: true
-          field_type: list_string
-          field_storage_settings:
-            allowed_values_function: canvas_load_allowed_values_for_component_prop
-          field_instance_settings: {  }
-          field_widget: options_select
-          default_value:
-            -
-              value: left
-          expression: ℹ︎list_string␟value
-        url:
-          required: false
-          field_type: string
-          field_storage_settings: {  }
-          field_instance_settings: {  }
-          field_widget: string_textfield
-          default_value: null
-          expression: ℹ︎string␟value
-    fallback_metadata:
-      slot_definitions: {  }
-label: Heading
-id: sdc.mercury.heading
-provider: mercury
+      slot_definitions:
+        hero_slot:
+          title: Content
+label: 'Hero side-by-side'
+id: sdc.deploya.hero-side-by-side
+provider: deploya
 source: sdc
-source_local_id: 'mercury:heading'
+source_local_id: 'deploya:hero-side-by-side'

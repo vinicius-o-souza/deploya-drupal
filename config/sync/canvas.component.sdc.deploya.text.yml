@@ -1,4 +1,4 @@
-uuid: 6956c682-6c8d-466f-ab37-cf0b3b5c95a5
+uuid: 50c74ff0-6474-4c19-9539-8b222fd4ab45
 langcode: en
 status: true
 dependencies:
@@ -8,14 +8,7 @@ dependencies:
     - options
     - text
   theme:
-    - mercury
-_core:
-  default_config_hash: EAf62V8PTI1RUyxz4x0pV7XcvG8bLUzVCoOpOzDUcI0
-label: Text
-id: sdc.mercury.text
-source: sdc
-source_local_id: 'mercury:text'
-provider: mercury
+    - deploya
 active_version: 16c79c28a4108f9b
 versioned_properties:
   active:
@@ -58,3 +51,8 @@ versioned_properties:
           expression: ℹ︎list_string␟value
     fallback_metadata:
       slot_definitions: {  }
+label: Text
+id: sdc.deploya.text
+provider: deploya
+source: sdc
+source_local_id: 'deploya:text'
