@@ -13,9 +13,10 @@ use Drupal\Core\Extension\ThemeExtensionList;
 use Drupal\Core\Extension\ThemeSettingsProvider;
 use Drupal\Core\Hook\Attribute\Hook;
 use Drupal\Core\Messenger\MessengerTrait;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\deploya\RenderCallbacks;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\Template\Attribute;
+use Drupal\deploya\RenderCallbacks;
 use Drupal\node\NodeInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -162,6 +163,18 @@ final class ThemeHooks {
     else {
       $variables['rendered_by_canvas'] = FALSE;
     }
+  }
+
+  /**
+   * Implements template_preprocess_views_view().
+   */
+  #[Hook('preprocess_views_view')]
+  public function preprocessView(array &$variables): void {
+    // @see views_infinite_scroll_preprocess_views_view()
+    $variables['content_attributes'] = (new Attribute(
+      $variables['rows']['#theme_wrappers']['container']['#attributes'] ?? [],
+    ))->addClass('view-content');
+    unset($variables['rows']['#theme_wrappers']['container']);
   }
 
 }

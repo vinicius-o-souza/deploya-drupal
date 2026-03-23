@@ -8,7 +8,7 @@
       },
       style: {
         default: 'bg-card',
-        inverted: 'bg-card-foreground text-card'
+        inverted: 'bg-foreground text-background'
       }
     }
   )
@@ -19,8 +19,8 @@
     base: ['absolute'],
     variants: {
       style: {
-        default: 'text-card-foreground/10',
-        inverted: 'text-card/10'
+        default: 'text-muted',
+        inverted: 'text-card-foreground'
       }
     }
   )
@@ -95,7 +95,7 @@
         {{ citation }}
         <cite class="font-normal not-italic">
           <br />
-          {% if cite_url %}
+          {% if cite_url and cite_url != 'No URL' %}
             <a href="{{ cite_url }}" target="_blank" class="underline underline-offset-2 hover:opacity-80">{{ cite_text }}</a>
           {% else %}
             <span class="text-base">{{ cite_text }}</span>

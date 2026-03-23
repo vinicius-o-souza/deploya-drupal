@@ -44,7 +44,7 @@ props:
       title: Image
       type: object
       examples:
-        - src: "assets/luke-chesser-pJadQetzTkI-unsplash.jpg"
-          alt: "Green blue gradient placeholder image"
+        - src: "assets/hero-image.jpg"
+          alt: "Blue-green graphic with a gradient effect"
           width: 1920
-          height: 1344
+          height: 1056

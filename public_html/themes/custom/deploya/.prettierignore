@@ -1,6 +1,8 @@
 # The placeholder tokens in `html.html.twig` used to inject head, CSS, and JS
 # placeholders break Prettier's HTML parsing.
 templates/layout/html.html.twig
+# The setAttribute function is parsed poorly.
+components/video/video.twig
 AGENTS.md
 # The GitLab CI pipeline installs Drupal in a `web/` directory placed at the
 # root of this codebase and symlinks all files to the right place.

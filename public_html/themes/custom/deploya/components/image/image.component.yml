@@ -10,7 +10,7 @@ props:
       type: object
       examples:
         - src: "assets/pexels-felix-mittermeier-1209650.jpg"
-          alt: "A purple, cloudy sky reflected on a calm lake"
+          alt: "Photo by Felix Mittermeier: https://www.pexels.com/photo/atmospheric-evening-bavaria-beautiful-clouds-1209650/"
           width: 1920
           height: 1014
     size:
@@ -50,4 +50,3 @@ props:
     url:
       type: string
       title: Link
-      format: uri-reference

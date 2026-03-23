@@ -1,12 +1,29 @@
-## Customizing deploya
+# Customizing Byte Theme
+
+**Don't subtheme Byte Theme**. It is tightly coupled to the Byte site template and does not provide backwards compatibility.
+
+### Fonts & colors
+
+To change the fonts or colors, copy the `src/theme.css` and `src/fonts.css` files to the web root, so that `theme.css` and `fonts.css` are sitting next to `index.php`. Commit them to your Git repository, and clear Drupal's cache. You can customize them however you like; changes you make to it will be reflected immediately on your site.
+
+If you want to make deeper customizations, you will need to convert Byte Theme to a custom theme with the same machine name. You can do this by running the following at the command line, from the Drupal project root (assuming `web` is the web root):
+
+```shell
+mkdir -p web/themes/custom
+cp -R web/themes/contrib/deploya web/themes/custom/deploya
+git add web/themes/custom/deploya
+composer remove drupal/deploya
+```
+
+Finally, clear Drupal's cache (via the UI, or `drush cache:rebuild`).
 
 ### Custom components
 
-deploya uses [single-directory components](https://www.drupal.org/docs/develop/theming-drupal/using-single-directory-components) and comes with a variety of commonly used components. You can add new components and modify existing ones, but be sure to rebuild the CSS when you make changes.
+Byte Theme uses [single-directory components](https://www.drupal.org/docs/develop/theming-drupal/using-single-directory-components) and comes with a variety of commonly used components. You can add new components and modify existing ones, but be sure to rebuild the CSS when you make changes.
 
 ## Building CSS
 
-deploya uses [Tailwind](https://tailwindcss.com) to simplify styling by using classes to compose designs directly in the markup.
+Byte Theme uses [Tailwind](https://tailwindcss.com) to simplify styling by using classes to compose designs directly in the markup.
 
 If you want to customize the Tailwind-generated CSS, install the development tooling dependencies by running `npm install` in your theme's directory.
 
@@ -14,7 +31,7 @@ If you modify CSS files or classes in a Twig template, run `npm run build` to re
 
 ## Code Formatting
 
-deploya uses [Prettier](https://prettier.io) to automatically format code for consistency. The project is configured with plugins for Tailwind CSS and Twig templates.
+Byte Theme uses [Prettier](https://prettier.io) to automatically format code for consistency. The project is configured with plugins for Tailwind CSS and Twig templates.
 
 For the best experience, [set up Prettier in your editor](https://prettier.io/docs/editors) to automatically format files on save.
 

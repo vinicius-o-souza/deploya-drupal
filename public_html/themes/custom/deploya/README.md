@@ -1,6 +1,6 @@
 # deploya Theme
 
-deploya is a component-based Drupal theme, providing a modern and flexible starting point for site owners to build scalable and efficient websites using [Drupal Canvas](/project/canvas).
+This is the default theme for deploya website, which is included in Drupal CMS. This project is a dependency of Drupal CMS and it is not recommended to use this theme on its own.
 
 ## Customization
 
@@ -17,8 +17,4 @@ Canvas's code components are currently not compatible with Tailwind-based themes
 
 ## Getting help
 
-If you have trouble or questions, please [visit the issue queue](https://www.drupal.org/project/issues/deploya?categories=All) or find us on [Drupal Slack](https://www.drupal.org/community/contributor-guide/reference-information/talk/tools/slack), in the `#drupal-cms-support` channel.
-
-## Roadmap
-
-deploya is under active development. Planned improvements include more components, better customization options, and [Storybook support](https://www.drupal.org/project/deploya/issues/3562711). If you want to contribute to deploya, check out the `#drupal-cms-development` channel in Drupal Slack.
+If you have trouble or questions, please [visit the issue queue](https://www.drupal.org/project/issues/deploya_theme?categories=All) or find us on [Drupal Slack](https://www.drupal.org/community/contributor-guide/reference-information/talk/tools/slack), in the `#drupal-cms-support` channel.

@@ -1,9 +1,15 @@
 {% set dropdown_menu =
   html_cva(
-    base: ['navbar--dropdown-menu', 'flex flex-col items-stretch justify-start gap-2 md:flex-row', 'max-h-full', 'overflow-auto md:overflow-visible'],
+    base: [
+      'navbar--dropdown-menu',
+      'flex flex-col items-stretch justify-start md:flex-row',
+      'max-h-full',
+      'gap-2',
+      'overflow-auto md:overflow-visible'
+    ],
     variants: {
       menuAlign: {
-        left: 'md:justify-start',
+        left: 'pl-8 md:justify-start',
         center: 'md:justify-center',
         right: 'md:justify-end'
       }
@@ -63,7 +69,7 @@
     </div>
 
     <div
-      class="navbar--links col-span-1 col-start-1 row-span-1 row-start-3 ml-auto flex w-full flex-initial shrink-0 grow-0 flex-col justify-end gap-2 md:w-auto md:flex-row"
+      class="navbar--links col-span-1 col-start-1 row-span-1 row-start-3 ml-auto flex w-full flex-initial shrink-0 grow-0 flex-col justify-end gap-2 md:w-auto md:flex-row [&>*:first-child]:ml-2"
     >
       {% block links %}
         {{

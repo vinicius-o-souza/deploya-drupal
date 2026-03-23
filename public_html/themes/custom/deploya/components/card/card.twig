@@ -2,11 +2,11 @@
 {% set card_style = style|default('framed') %}
 {% set card_background = background|default('noColor') %}
 {% set is_text_centered = is_text_centered|default(false) ? 'yes' : 'no' %}
-{% set is_clickable = url is not empty ? 'yes' : 'no' %}
+{% set is_clickable = url is not empty and url != 'No URL' ? 'yes' : 'no' %}
 
 {% set card =
   html_cva(
-    base: ['group relative flex rounded-xl shadow-2xl transition duration-300 in-[.views-row]:h-full'],
+    base: ['group relative flex rounded-xl shadow-lg in-[.views-row]:h-full'],
     variants: {
       orientation: {
         vertical: 'flex-col',
@@ -17,7 +17,7 @@
         no: 'text-left'
       },
       clickable: {
-        yes: 'cursor-pointer hover:scale-103',
+        yes: 'cursor-pointer transition duration-300 hover:scale-103',
         no: ''
       },
       style: {
@@ -25,11 +25,11 @@
         full: ''
       },
       backgroundColor: {
-        default: 'bg-card text-card-foreground hover:bg-card/90 hover:text-card-foreground/90',
+        default: 'bg-card text-card-foreground hover:bg-card/80 hover:text-card-foreground/80',
         accent: 'bg-accent text-accent-foreground hover:bg-accent/80 hover:text-accent-foreground/80',
-        primary: 'bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground/90',
-        inverted: 'bg-foreground text-background hover:bg-foreground/90 hover:text-background/90',
-        noColor: 'shadow-none hover:text-foreground/90'
+        primary: 'bg-primary text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground/80',
+        inverted: 'bg-foreground text-background hover:bg-foreground/80 hover:text-background/80',
+        noColor: 'shadow-none hover:text-foreground/80'
       }
     },
     compound_variants: [

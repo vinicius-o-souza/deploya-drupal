@@ -22,4 +22,3 @@ props:
     cite_url:
       type: string
       title: Citation link
-      format: uri-reference

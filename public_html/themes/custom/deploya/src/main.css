@@ -93,7 +93,7 @@
   --spacing: 4px;
 }
 
-/* Custom theme classes */
+/* Custom theme classes. */
 @layer base {
   body {
     @apply bg-background font-normal text-foreground antialiased;
@@ -108,17 +108,17 @@
     @apply list-disc ps-5;
   }
 
-  /* Set base heading styles since Tailwind sets them to inherit */
+  /* Set base heading styles since Tailwind sets them to inherit. */
   h1 {
-    @apply text-5xl leading-none font-semibold md:text-6xl lg:text-7xl 2xl:text-8xl;
+    @apply text-5xl font-semibold md:text-6xl lg:text-7xl;
   }
 
   h2 {
-    @apply text-3xl font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl;
+    @apply text-3xl font-semibold md:text-4xl lg:text-5xl;
   }
 
   h3 {
-    @apply text-2xl font-semibold xl:text-3xl;
+    @apply text-2xl font-semibold md:text-3xl;
   }
 
   h4 {
@@ -228,9 +228,7 @@
   input[type="time"],
   textarea,
   select {
-    @apply w-full border-0 border-b bg-transparent text-base outline-none;
-    /* @todo Add p-1.5 when this is fixed in Canvas: https://www.drupal.org/i/3572963. */
-    padding: calc(var(--spacing) * 1.5);
+    @apply w-full border-0 border-b bg-transparent p-1.5 text-base outline-none;
   }
 
   input[type="text"]:focus,
@@ -301,12 +299,12 @@
   }
 }
 
-/* Override the moderation form block background */
+/* Override the moderation form block background. */
 .entity-moderation-form {
   background: inherit;
 }
 
-/* Ensure the page content does not cover the top bar when scrolling */
+/* Ensure the page content does not cover the top bar when scrolling. */
 .layout-container {
   position: relative;
   z-index: 1;
@@ -331,7 +329,7 @@
     margin-inline: calc(-50cqw + 50%);
   }
 
-  /* Provide basic styles for views elements */
+  /* Provide basic styles for views elements. */
   .views-exposed-form {
     @apply flex items-center gap-2;
   }
@@ -340,7 +338,14 @@
     @apply pb-4 md:pb-6;
   }
 
-  /* Responsive text size utility */
+  /* Provide basic styles for search results page. */
+  .view-search.view-display-id-page {
+    .view-content {
+      @apply flex max-w-4xl flex-col gap-4 md:gap-6;
+    }
+  }
+
+  /* Responsive text size utility. */
   .heading-responsive-8xl {
     @apply text-6xl md:text-7xl xl:text-8xl;
   }
