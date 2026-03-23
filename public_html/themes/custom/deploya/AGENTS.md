@@ -2,6 +2,8 @@
 
 This document contains coding rules and conventions for the deploya theme that AI agents should follow when making changes.
 
+> **Visual Identity**: Before creating or modifying any component, read `VISUAL-IDENTITY.md` in this directory for brand colors, typography, spacing, and logo usage rules.
+
 ## CVA (Class Variant Authority) Usage
 
 ### Conditionals Must Use CVA
@@ -427,7 +429,7 @@ Or use a wrapper approach:
 } only %}
 ```
 
-**Note**: 
+**Note**:
 - Use `with_context: false` with the `include()` function syntax
 - Use `with only` with the `{% include %}` tag syntax
 - Both achieve the same result: preventing context pollution by only passing explicitly defined variables

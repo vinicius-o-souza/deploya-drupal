@@ -113,9 +113,8 @@ Adhere to Drupal coding standards (PSR-12 with Drupal extensions). Use Coder and
 
 - **Linting**:
   ```bash
-  ddev exec vendor/bin/phpcs --standard=Drupal --extensions=php,inc,module,install,info,yml src/
-  ddev exec vendor/bin/phpcs --standard=DrupalPractice --extensions=php,inc,module,install,info,yml src/
-  ddev exec vendor/bin/phpcs --standard=Drupal --fix src/
+  ddev exec vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,install,info,yml src/
+  ddev exec vendor/bin/phpstan
   ```
 
 **Reject any code that fails Drupal Coder sniffs.**
@@ -385,7 +384,6 @@ ddev exec vendor/bin/phpstan analyse                      # PHPStan analysis
 ddev exec vendor/bin/psalm                               # Psalm analysis
 
 # Security scanning
-ddev exec vendor/bin/drupal-check                        # Check for deprecated code
 ddev exec composer audit                                 # Check for security advisories
 
 # Accessibility testing
@@ -399,13 +397,14 @@ ddev exec npm install
 
 # Run JavaScript tests
 ddev exec npm run test                                   # Jest tests
-ddev exec npm run test:a11y                             # Accessibility tests
+ddev exec npm run test:a11y                              # Accessibility tests
 ```
 
 ### Before Submitting Code
 ```bash
 # Quality checklist
-ddev exec vendor/bin/phpcs --standard=Drupal .          # Code style
+ddev exec vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,install,info,yml public_html/modules/custom/           # Code style
+ddev exec vendor/bin/phpstan                             # Code analysis
 ddev exec vendor/bin/phpunit                             # Run tests
 ddev exec drush cr                                       # Clear caches
 ddev exec drush updatedb                                 # Run updates
