@@ -1,12 +1,10 @@
-uuid: e32993c4-3002-48fb-913e-3977be7c2688
+uuid: 5570196a-95a5-450e-b432-474c20cce527
 langcode: en
 status: true
 dependencies:
-  module:
-    - link
   theme:
     - deploya
-active_version: cc5b33810a04e564
+active_version: f8798ead1e51ce02
 versioned_properties:
   active:
     settings:
@@ -43,14 +41,12 @@ versioned_properties:
           expression: ℹ︎string␟value
         cite_url:
           required: false
-          field_type: link
+          field_type: string
           field_storage_settings: {  }
-          field_instance_settings:
-            title: 0
-            link_type: 17
-          field_widget: link_default
+          field_instance_settings: {  }
+          field_widget: string_textfield
           default_value: null
-          expression: ℹ︎link␟url
+          expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
 label: Blockquote

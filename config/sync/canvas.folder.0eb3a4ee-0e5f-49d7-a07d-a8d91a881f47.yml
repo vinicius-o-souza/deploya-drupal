@@ -1,0 +1,9 @@
+uuid: 0eb3a4ee-0e5f-49d7-a07d-a8d91a881f47
+langcode: en
+status: true
+dependencies: {  }
+name: Views
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_exposed_filter_block.search-page

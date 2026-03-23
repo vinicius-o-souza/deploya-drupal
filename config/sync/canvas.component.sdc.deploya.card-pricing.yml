@@ -1,16 +1,15 @@
-uuid: 220188c2-0ca3-41df-94e0-3ffc3f969f24
+uuid: 0edb3033-927b-4ff8-bc76-0322a5da9a70
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.canvas_html_block
   module:
-    - link
     - options
     - text
   theme:
     - deploya
-active_version: 8b1a744c877e8029
+active_version: e3cd2e622cde8f16
 versioned_properties:
   active:
     settings:
@@ -91,14 +90,12 @@ versioned_properties:
           expression: ℹ︎text_long␟processed
         button_url:
           required: false
-          field_type: link
+          field_type: string
           field_storage_settings: {  }
-          field_instance_settings:
-            title: 0
-            link_type: 17
-          field_widget: link_default
+          field_instance_settings: {  }
+          field_widget: string_textfield
           default_value: null
-          expression: ℹ︎link␟url
+          expression: ℹ︎string␟value
         button_label:
           required: false
           field_type: string

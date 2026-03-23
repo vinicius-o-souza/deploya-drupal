@@ -7,33 +7,3 @@ definitions:
     parent: system.admin
     weight: 10
     expanded: false
-  navigation__create:
-    enabled: true
-    menu_name: content
-    parent: ''
-    expanded: false
-    weight: -10
-  navigation__content__node_type__page:
-    enabled: true
-    menu_name: content
-    parent: navigation.create
-    weight: 0
-    expanded: false
-  navigation__content__media_type__document:
-    enabled: true
-    menu_name: content
-    parent: navigation.create
-    weight: 1
-    expanded: false
-  navigation__content__media_type__image:
-    enabled: true
-    menu_name: content
-    parent: navigation.create
-    weight: 1
-    expanded: false
-  navigation__create__user:
-    enabled: true
-    menu_name: content
-    parent: navigation.create
-    weight: 100
-    expanded: false

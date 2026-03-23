@@ -1,13 +1,12 @@
-uuid: 95a7db6b-b015-43ee-aa36-d9644db568ac
+uuid: d0e6ba39-fabf-49ad-86dd-9ea4765744ae
 langcode: en
 status: true
 dependencies:
   module:
-    - link
     - options
   theme:
     - deploya
-active_version: 0ca665b3987e81dd
+active_version: 8c253a9827f0ca84
 versioned_properties:
   active:
     settings:
@@ -35,14 +34,12 @@ versioned_properties:
           expression: ℹ︎string␟value
         href:
           required: false
-          field_type: link
+          field_type: string
           field_storage_settings: {  }
-          field_instance_settings:
-            title: 0
-            link_type: 17
-          field_widget: link_default
+          field_instance_settings: {  }
+          field_widget: string_textfield
           default_value: null
-          expression: ℹ︎link␟url
+          expression: ℹ︎string␟value
         size:
           required: true
           field_type: list_string

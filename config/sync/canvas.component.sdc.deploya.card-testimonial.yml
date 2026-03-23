@@ -1,4 +1,4 @@
-uuid: 27427d42-19c7-44b3-a5e3-5fe6de30d302
+uuid: 948b1667-c524-4c6a-a119-e00472bd8d84
 langcode: en
 status: true
 dependencies:
@@ -10,13 +10,12 @@ dependencies:
     - media.type.svg_image
   module:
     - file
-    - link
     - media
     - media_library
     - options
   theme:
     - deploya
-active_version: 1cfce5d019a22099
+active_version: 0f35e59bdd6e6655
 versioned_properties:
   active:
     settings:
@@ -53,14 +52,12 @@ versioned_properties:
           expression: ℹ︎string␟value
         cite_url:
           required: false
-          field_type: link
+          field_type: string
           field_storage_settings: {  }
-          field_instance_settings:
-            title: 0
-            link_type: 17
-          field_widget: link_default
+          field_instance_settings: {  }
+          field_widget: string_textfield
           default_value: null
-          expression: ℹ︎link␟url
+          expression: ℹ︎string␟value
         align:
           required: true
           field_type: list_string

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(0.49554013875123887,0,0,0.49554013875123887,0,262.6362735381566)"><svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="911.5 601 2017 958" width="2018" height="958"><style>
+		.s0 { fill: #00d9ff } 
+		.s1 { fill: #2a2a2a } 
+		.s2 { fill: #00ffb8 } 
+	</style><g id="Layer 1">
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Compound Path&gt;" class="s0" d="m911.5 1213.63l305.17-161.38v-8.23l-305.17-161.38v-141.85l441.83 236.42v141.85l-441.83 236.42z"></path>
+			<path id="&lt;Compound Path&gt;" class="s1" d="m2037.66 1265.02h-7.2c-26.71 63.73-71.92 108.96-157.21 108.96-117.13 0-199.33-85.32-199.33-277.53 0-192.22 82.2-277.54 199.33-277.54 85.29 0 130.5 45.23 157.21 108.96h7.2v-326.87h152.07v760.64h-152.07zm0-90.45v-156.24c0-55.51-45.22-81.21-98.65-81.21-67.81 0-106.86 44.2-106.86 118.21v82.23c0 74.01 39.05 118.21 106.86 118.21 53.43 0 98.65-25.69 98.65-81.2z"></path>
+			<path id="&lt;Path&gt;" class="s2" d="m2311.99 1434.62v124.38h616.51v-124.38z"></path>
+		</g>
+	</g></svg></g></g></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1005)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(0.3468780971258672,0,0,0.3468780971258672,150,333.8453914767096)"><svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="911.5 601 2017 958" width="2018" height="958"><style>
+		.s0 { fill: #00d9ff } 
+		.s1 { fill: #2a2a2a } 
+		.s2 { fill: #00ffb8 } 
+	</style><g id="Layer 1">
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Compound Path&gt;" class="s0" d="m911.5 1213.63l305.17-161.38v-8.23l-305.17-161.38v-141.85l441.83 236.42v141.85l-441.83 236.42z"></path>
+			<path id="&lt;Compound Path&gt;" class="s1" d="m2037.66 1265.02h-7.2c-26.71 63.73-71.92 108.96-157.21 108.96-117.13 0-199.33-85.32-199.33-277.53 0-192.22 82.2-277.54 199.33-277.54 85.29 0 130.5 45.23 157.21 108.96h7.2v-326.87h152.07v760.64h-152.07zm0-90.45v-156.24c0-55.51-45.22-81.21-98.65-81.21-67.81 0-106.86 44.2-106.86 118.21v82.23c0 74.01 39.05 118.21 106.86 118.21 53.43 0 98.65-25.69 98.65-81.2z"></path>
+			<path id="&lt;Path&gt;" class="s2" d="m2311.99 1434.62v124.38h616.51v-124.38z"></path>
+		</g>
+	</g></svg></g></g><defs><clipPath id="SvgjsClipPath1005"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg></g></svg>

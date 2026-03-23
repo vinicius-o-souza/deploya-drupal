@@ -1,15 +1,14 @@
-uuid: d80cfb9a-1ec8-4244-b75f-b79dd0e1dc2f
+uuid: 47d619d5-f30c-47e1-b9c0-05d7ee9e177d
 langcode: en
 status: true
 dependencies:
   config:
     - system.menu.top-tasks
-    - views.view.recent_content
-    - views.view.recent_pages
   module:
+    - announcements_feed
+    - drupical
     - layout_builder
     - system
-    - views
 _core:
   default_config_hash: ad9rPZBdHWCDrxAsj8yrR5swSanp8VWKwoS9n-de1RI
 id: welcome
@@ -20,8 +19,8 @@ layout:
     layout_id: layout_twocol_section
     layout_settings:
       label: 'Content and tasks'
-      context_mapping: {  }
       column_widths: 67-33
+      context_mapping: {  }
     components:
       cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8:
         uuid: cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8
@@ -84,8 +83,30 @@ layout:
     layout_id: layout_twocol_section
     layout_settings:
       label: 'Announcements and Events'
-      context_mapping: {  }
       column_widths: 50-50
-    components: {  }
+      context_mapping: {  }
+    components:
+      237ad3cf-cb2b-4991-a107-efafbef5f846:
+        uuid: 237ad3cf-cb2b-4991-a107-efafbef5f846
+        region: first
+        configuration:
+          id: announce_block
+          label: Announcements
+          label_display: visible
+          provider: announcements_feed
+          context_mapping: {  }
+        weight: 0
+        additional: {  }
+      f7bdc8cb-8be7-4cff-8124-ff0b45aefd36:
+        uuid: f7bdc8cb-8be7-4cff-8124-ff0b45aefd36
+        region: second
+        configuration:
+          id: events_block
+          label: 'Drupal Events'
+          label_display: visible
+          provider: drupical
+          context_mapping: {  }
+        weight: 0
+        additional: {  }
     third_party_settings: {  }
 weight: 0

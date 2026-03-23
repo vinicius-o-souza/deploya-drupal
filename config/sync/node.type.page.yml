@@ -1,9 +1,11 @@
-uuid: bd085f1a-1aea-487b-a5a7-91b6c74e9ddd
+uuid: 2084cdc9-14e6-412d-babe-091b7f4baaa2
 langcode: en
 status: true
 dependencies:
   module:
+    - menu_ui
     - scheduler
+    - search_api_exclude
 third_party_settings:
   scheduler:
     expand_fieldset: when_required
@@ -18,6 +20,14 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: true
+  search_api_exclude:
+    enabled: true
+  menu_ui:
+    available_menus:
+      - main
+      - footer
+      - utility
+    parent: 'main:'
 _core:
   default_config_hash: Dd_UIheMYCyUSYpcYZ23-hLtWuOcpDJ7H42ddcw68sI
 name: 'Utility page'

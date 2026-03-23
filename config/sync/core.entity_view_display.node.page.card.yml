@@ -1,4 +1,4 @@
-uuid: eefa294f-f1ef-49c8-b5a9-92074a111350
+uuid: 20eda98b-728f-46ee-b625-d29794acb847
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,10 @@ dependencies:
     - field.field.node.page.field_content
     - field.field.node.page.field_description
     - field.field.node.page.field_featured_image
+    - field.field.node.page.field_seo_analysis
+    - field.field.node.page.field_seo_description
+    - field.field.node.page.field_seo_image
+    - field.field.node.page.field_seo_title
     - field.field.node.page.field_tags
     - node.type.page
   module:
@@ -37,5 +41,10 @@ content:
 hidden:
   content_moderation_control: true
   field_content: true
+  field_seo_analysis: true
+  field_seo_description: true
+  field_seo_image: true
+  field_seo_title: true
   field_tags: true
   links: true
+  search_api_excerpt: true

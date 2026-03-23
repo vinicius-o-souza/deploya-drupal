@@ -1,4 +1,4 @@
-uuid: d8e12784-e937-46db-9035-7e776f3dac31
+uuid: 8cf50d98-1da4-469a-beb9-1742eb4df0e2
 langcode: en
 status: true
 dependencies:
@@ -10,13 +10,12 @@ dependencies:
     - media.type.svg_image
   module:
     - file
-    - link
     - media
     - media_library
     - options
   theme:
     - deploya
-active_version: edb9b77489dca82c
+active_version: a2733fe241c6841e
 versioned_properties:
   active:
     settings:
@@ -57,14 +56,12 @@ versioned_properties:
           expression: ℹ︎list_string␟value
         url:
           required: false
-          field_type: link
+          field_type: string
           field_storage_settings: {  }
-          field_instance_settings:
-            title: 0
-            link_type: 17
-          field_widget: link_default
+          field_instance_settings: {  }
+          field_widget: string_textfield
           default_value: null
-          expression: ℹ︎link␟url
+          expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
 label: 'Logo card'

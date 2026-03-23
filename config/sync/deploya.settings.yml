@@ -8,5 +8,6 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  use_default: true
-scheme: light
+  path: themes/custom/deploya/logo-dark.svg
+  use_default: false
+scheme: dark

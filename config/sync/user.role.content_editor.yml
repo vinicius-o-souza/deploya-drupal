@@ -1,4 +1,4 @@
-uuid: 8d67c9b6-4a6c-4f36-90ff-34c7a0f1e954
+uuid: 580cf153-665f-4943-9dea-502aa5c07049
 langcode: en
 status: true
 dependencies:
@@ -10,6 +10,7 @@ dependencies:
     - media.type.remote_video
     - media.type.svg_image
     - media.type.video
+    - node.type.blog
     - node.type.page
     - workflows.workflow.basic_editorial
   module:
@@ -24,6 +25,7 @@ dependencies:
     - redirect
     - scheduler
     - system
+    - trash
 _core:
   default_config_hash: g-zSnaBXJnH7VoimReFb6KcLjIgHCU-hisiShtZ9hjQ
 id: content_editor
@@ -34,9 +36,11 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access media overview'
+  - 'access trash'
   - 'administer menu'
   - 'administer redirects'
   - 'administer url aliases'
+  - 'create blog content'
   - 'create canvas_page'
   - 'create document media'
   - 'create image media'
@@ -45,14 +49,17 @@ permissions:
   - 'create svg_image media'
   - 'create url aliases'
   - 'create video media'
+  - 'delete any blog content'
   - 'delete any document media'
   - 'delete any image media'
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any svg_image media'
   - 'delete any video media'
+  - 'delete blog revisions'
   - 'delete canvas_page'
   - 'delete page revisions'
+  - 'edit any blog content'
   - 'edit any image media'
   - 'edit any page content'
   - 'edit any remote_video media'

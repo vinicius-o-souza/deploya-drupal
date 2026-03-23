@@ -1,0 +1,69 @@
+uuid: 219612a0-094a-46c3-a991-e229aef8bdcf
+langcode: en
+status: false
+dependencies:
+  module:
+    - options
+  theme:
+    - byte_theme
+_core:
+  default_config_hash: BCnELEF6NMvhGeN9D23dzQ6EGtvo-3RnL8p7kmF7Elw
+active_version: 7d2cdaeca3752d68
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        icon:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: rocket
+          expression: ℹ︎string␟value
+        icon_size:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: small
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  7d2cdaeca3752d68:
+    settings:
+      prop_field_definitions:
+        icon:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: rocket
+          expression: ℹ︎string␟value
+        icon_size:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: small
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: Icon
+id: sdc.byte_theme.icon
+provider: byte_theme
+source: sdc
+source_local_id: 'byte_theme:icon'
