@@ -9,11 +9,11 @@
 
 {% set size_map = {
   'extra-extra-small': 16,
-  'extra-small': 20,
-  small: 24,
-  medium: 32,
-  large: 48,
-  'extra-large': 64
+  'extra-small': 32,
+  small: 48,
+  medium: 64,
+  large: 80,
+  'extra-large': 96
 } %}
 
 {% set resolved_size = size_map[icon_size]|default(size_map['small']) %}

@@ -204,7 +204,7 @@
   .fieldgroup:focus-within {
     > label,
     .fieldset-legend {
-      @apply text-accent;
+      @apply text-input;
     }
   }
 

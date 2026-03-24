@@ -2,45 +2,58 @@
  * @file theme.css
  * shadcn/ui-compatible theme variables for deploya.
  *
- * You can customize these values without rebuilding the compiled CSS.
- * Tools like https://tweakcn.com can help generate these values.
+ * Colors mapped from VISUAL-IDENTITY.md brand palette:
+ *
+ * Primary:   Cyan Ignition (#00D9FF) - action, technology, links
+ * Secondary: Neon Pulse (#00FFB8) - active, success, CTA
+ * Core text: Graphite Core (#2A2A2A) - headings, primary text
+ *
+ * Neutrals (light→dark):
+ *   Pure Canvas #FFFFFF | Cloud Mist #F8F9FA | Frost Light #E9ECEF
+ *   Steel Haze #DEE2E6 | Silver Line #CED4DA | Slate Fade #ADB5BD
+ *   Iron Gray #6C757D  | Charcoal Soft #495057 | Obsidian Soft #343A40
+ *   Shadow Deep #141414 | Void Black #0A0A0A
+ *
+ * Status: Critical Alert #FF5757 | Amber Glow #FFB800
  */
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #2A2A2A;
-  --card: oklch(0.967 0.003 264.542);
-  --card-foreground: oklch(0.21 0.032 264.665);
-  --primary: oklch(0.547 0.246 262.866);
-  --primary-foreground: #FFFFFF;
-  --secondary: oklch(0.9219 0 0);
-  --secondary-foreground: oklch(0.28 0.041 260.329);
-  --muted: oklch(0.967 0.003 264.542);
-  --muted-foreground: oklch(0.373 0.031 259.733);
-  --accent: oklch(0.932 0.032 255.585);
-  --accent-foreground: var(--foreground);
-  --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: #FFFFFF;
-  --border: oklch(0.872 0.009 258.338);
-  --input: oklch(0.872 0.009 258.338);
-  --font-sans: "Outfit", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: "Fira Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
-  --radius: 0.5rem;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --card: #f8f9fa;
+  --card-foreground: #2a2a2a;
+  --primary: #00d9ff;
+  --primary-foreground: #2a2a2a;
+  --secondary: #00ffb8;
+  --secondary-foreground: #2a2a2a;
+  --muted: #e4f6f9;
+  --muted-foreground: #dee2e6;
+  --accent: #0099b8;
+  --accent-foreground: #f8f9fa;
+  --destructive: #ff5757;
+  --destructive-foreground: #ffffff;
+  --warning: #ffb800;
+  --warning-foreground: #ffffff;
+  --border: #ced4da;
+  --input: #0a0a0a;
+  --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --font-serif: "IBM Plex Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "IBM Plex Mono", "Fira Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+  --radius: 0.75rem;
   --shadow-x: 0;
   --shadow-y: 1px;
-  --shadow-blur: 3px;
+  --shadow-blur: 2px;
   --shadow-spread: 0px;
-  --shadow-opacity: 0.1;
-  --shadow-color: oklch(0 0 0);
-  --shadow-2xs: 0 1px 3px 1px hsl(0 0% 0% / 0.05);
-  --shadow-xs: 0 1px 3px 1px hsl(0 0% 0% / 0.05), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-  --shadow-sm: 0 1px 3px 1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
-  --shadow: 0 1px 3px 1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
-  --shadow-md: 0 1px 3px 1px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.1);
-  --shadow-lg: 0 1px 3px 1px hsl(0 0% 0% / 0.1), 0 8px 10px -2px hsl(0 0% 0% / 0.1);
-  --shadow-xl: 0 1px 3px 1px hsl(0 0% 0% / 0.1), 0 12px 14px -3px hsl(0 0% 0% / 0.1);
-  --shadow-2xl: 0 1px 3px 1px hsl(0 0% 0% / 0.1), 0 16px 18px -3px hsl(0 0% 0% / 0.1);
+  --shadow-opacity: 0.06;
+  --shadow-color: #0a0a0a;
+  --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.03);
+  --shadow-xs: 0 1px 2px 0 hsl(0 0% 0% / 0.04);
+  --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.06), 0 1px 2px -1px hsl(0 0% 0% / 0.04);
+  --shadow: 0 2px 4px 0 hsl(0 0% 0% / 0.06), 0 1px 3px -1px hsl(0 0% 0% / 0.04);
+  --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.06), 0 2px 4px -2px hsl(0 0% 0% / 0.04);
+  --shadow-lg: 0 8px 16px -2px hsl(0 0% 0% / 0.06), 0 4px 6px -3px hsl(0 0% 0% / 0.04);
+  --shadow-xl: 0 16px 24px -4px hsl(0 0% 0% / 0.06), 0 8px 10px -4px hsl(0 0% 0% / 0.03);
+  --shadow-2xl: 0 24px 48px -8px hsl(0 0% 0% / 0.08);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -53,32 +66,34 @@
 }
 
 .dark {
-  --background: #2A2A2A;
-  --foreground: oklch(1 0 89.876);
-  --card: oklch(0.208 0.042 266.359);
-  --card-foreground: var(--foreground);
-  --primary: oklch(0.547 0.246 262.866);
-  --primary-foreground: var(--foreground);
-  --secondary: oklch(0.704 0.04 256.993);
-  --secondary-foreground: oklch(0.13 0.043 265.132);
-  --muted: oklch(0.28 0.041 260.329);
-  --muted-foreground: oklch(0.967 0.003 264.542);
-  --accent: oklch(0.932 0.032 255.585);
-  --accent-foreground: oklch(0.13 0.043 265.132);
-  --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: #FFFFFF;
-  --border: oklch(0.373 0.031 259.733);
-  --input: oklch(0.373 0.031 259.733);
-  --font-sans: "Outfit", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: "Fira Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+  --background: #0a0a0a;
+  --foreground: #f8f9fa;
+  --card: #2a2a2a;
+  --card-foreground: #f8f9fa;
+  --primary: #00d9ff;
+  --primary-foreground: #2a2a2a;
+  --secondary: #00ffb8;
+  --secondary-foreground: #2a2a2a;
+  --muted: #495057;
+  --muted-foreground: #dee2e6;
+  --accent: #2a2a2a;
+  --accent-foreground: #f8f9fa;
+  --destructive: #ff5757;
+  --destructive-foreground: #f8f9fa;
+  --warning: #ffb800;
+  --warning-foreground: #f8f9fa;
+  --border: #ced4da;
+  --input: #f8f9fa;
+  --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --font-serif: "IBM Plex Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "IBM Plex Mono", "Fira Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
   --radius: 0.5rem;
   --shadow-x: 0;
   --shadow-y: 1px;
   --shadow-blur: 3px;
   --shadow-spread: 0px;
   --shadow-opacity: 0.1;
-  --shadow-color: oklch(0 0 0);
+  --shadow-color: #000000;
   --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
   --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);

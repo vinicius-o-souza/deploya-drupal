@@ -20,24 +20,14 @@ props:
         - 1
 
     date:
-      type: integer
+      type: string
       title: Published Date
-      # 2026-02-12
-      default: 1770856866
-      examples:
-        - 1770856866
 
     author:
       type: string
       title: Author
       examples:
         - "John Smith"
-
-    author_url:
-      type: string
-      title: Author link
-      default: ""
-      examples: []
 
     media:
       $ref: json-schema-definitions://canvas.module/image

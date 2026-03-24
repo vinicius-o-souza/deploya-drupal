@@ -1,6 +1,6 @@
 {% set classes = classes|default([])|merge(['hero-blog', 'py-8', 'md:py-12'])|filter(v => v is not empty) %}
 
-{% set date_formatted = date|date('m.d.Y') %}
+{% set date_formatted = date %}
 
 <section class="{{ classes|join(' ') }} cq-full">
   <div class="hero-blog--content container mx-auto flex flex-col gap-8 px-6 md:w-full md:gap-12 lg:w-10/12 xl:w-8/12">
@@ -14,7 +14,6 @@
         {
           heading_text: heading_text|default(''),
           level: level|default(1),
-          url: 'No URL',
           text_color: 'default',
           text_size: 'heading-responsive-6xl',
           align: 'left'
