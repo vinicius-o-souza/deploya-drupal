@@ -1,0 +1,20 @@
+uuid: 9a689a24-812b-4b14-86d9-9ee0fc14ae46
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+  module:
+    - options
+id: media.image.publish_state
+field_name: publish_state
+entity_type: media
+bundle: image
+label: 'Publish state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

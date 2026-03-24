@@ -14,7 +14,7 @@ bundle: blog
 label: 'SEO title'
 description: 'Use this field to overwrite the default HTML page title for SEO.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

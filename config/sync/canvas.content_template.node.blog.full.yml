@@ -5,15 +5,14 @@ dependencies:
   config:
     - canvas.component.block.system_breadcrumb_block
     - canvas.component.block.views_block.blog-related
-    - canvas.component.sdc.byte_theme.button
-    - canvas.component.sdc.byte_theme.cta
-    - canvas.component.sdc.byte_theme.heading
-    - canvas.component.sdc.byte_theme.hero-blog
-    - canvas.component.sdc.byte_theme.section
-    - canvas.component.sdc.byte_theme.text
+    - canvas.component.sdc.deploya.heading
+    - canvas.component.sdc.deploya.hero-blog
+    - canvas.component.sdc.deploya.section
+    - canvas.component.sdc.deploya.text
+    - core.base_field_override.node.blog.title
+    - core.base_field_override.node.blog.uid
     - core.entity_view_mode.node.full
     - field.field.media.image.field_media_image
-    - field.field.node.blog.field_blog__byline
     - field.field.node.blog.field_content
     - field.field.node.blog.field_featured_image
     - filter.format.content_format
@@ -25,6 +24,7 @@ dependencies:
     - media
     - node
     - options
+    - user
 _core:
   default_config_hash: pwYkq7cqJFYPekxzK0pNo2D_8ivJYfcZvQxxN0nkpfw
 id: node.blog.full
@@ -33,63 +33,44 @@ content_entity_type_bundle: blog
 content_entity_type_view_mode: full
 component_tree:
   0:
-    uuid: 92e68054-9f78-4420-8752-96ec693d2fa9
+    uuid: fe348c39-0a90-4386-b14f-335ce3b45ef8
     component_id: block.system_breadcrumb_block
-    component_version: ad6359c331fc7c45
+    component_version: 5c765ac0b278eba4
     inputs: '{"label":"Breadcrumbs","label_display":"0"}'
   1:
-    uuid: 14f8bf3e-e882-48fb-ba4e-83e932f0748b
-    component_id: sdc.byte_theme.hero-blog
-    component_version: 989a5b66efe6aa48
-    inputs: '{"heading_text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:blog\u241dtitle\u241e\u241fvalue"},"level":1,"date":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:blog\u241dcreated\u241e\u241fvalue"},"author":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:blog\u241dfield_blog__byline\u241e\u241fvalue"},"media":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:blog\u241dfield_featured_image\u241e\u241fentity\u241c\u241centity:media:image\u241dfield_media_image\u241e\u241f{src\u21a0src_with_alternate_widths,alt\u21a0alt,width\u21a0width,height\u21a0height}"}}'
+    uuid: 8f0ff0a7-900f-4b6f-9f8f-720a53c80082
+    component_id: sdc.deploya.hero-blog
+    component_version: d4563ceb9a30033b
+    inputs: '{"heading_text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:blog\u241dtitle\u241e\u241fvalue"},"level":1,"author":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:blog\u241duid\u241e\u241fentity\u241c\u241centity:user\u241dname\u241e\u241fvalue"},"media":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:blog\u241dfield_featured_image\u241e\u241fentity\u241c\u241centity:media:image\u241dfield_media_image\u241e\u241f{src\u21a0src_with_alternate_widths,alt\u21a0alt,width\u21a0width,height\u21a0height}"}}'
   2:
-    uuid: ea40592d-2c03-45e8-9c19-a66a96a59ec9
-    component_id: sdc.byte_theme.section
-    component_version: 5ef4c2af9bd07348
-    inputs: '{"columns":"100","section_header":true,"section_footer":true,"margin_block_start":"0","margin_block_end":"0","mobile_columns":1,"width":"75%","padding_block_start":"0","padding_block_end":"64","background_color":"accent"}'
+    uuid: 361b9ee6-1a6d-4fbb-8a8d-a7d3b4c289a0
+    component_id: sdc.deploya.section
+    component_version: a917d5c9be8f2830
+    inputs: '{"width":"75%","columns":"100","mobile_columns":"1","margin_block_start":"0","margin_block_end":"0","padding_block_start":"0","padding_block_end":"64","section_header":false,"section_footer":false,"background_color":"accent"}'
   '2:main_slot:0':
-    parent_uuid: ea40592d-2c03-45e8-9c19-a66a96a59ec9
+    parent_uuid: 361b9ee6-1a6d-4fbb-8a8d-a7d3b4c289a0
     slot: main_slot
-    uuid: caa1e4b2-d58b-4140-b99b-ab3e1ce55ad5
-    component_id: sdc.byte_theme.text
+    uuid: 0ac5343e-6590-4fab-be0c-3859eb17383b
+    component_id: sdc.deploya.text
     component_version: 16c79c28a4108f9b
-    inputs: '{"text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:blog\u241dfield_content\u241e\u241fprocessed"},"text_size":"normal","text_color":"inverted"}'
+    inputs: '{"text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:blog\u241dfield_content\u241e\u241fprocessed"},"text_size":"normal","text_color":"default"}'
   3:
-    uuid: d371f39b-3ad5-4920-afb1-23320aa47c8a
-    component_id: sdc.byte_theme.section
-    component_version: 5ef4c2af9bd07348
-    inputs: '{"width":"100%","columns":"100","mobile_columns":"1","margin_block_start":"0","margin_block_end":"0","padding_block_start":"64","padding_block_end":"64","background_color":"muted","section_header":true,"section_footer":true,"views_columns":"33-33-33"}'
+    uuid: 21ffd389-4bb0-458f-a177-071db703964f
+    component_id: sdc.deploya.section
+    component_version: a917d5c9be8f2830
+    inputs: '{"width":"100%","columns":"100","views_columns":"33-33-33","mobile_columns":"1","margin_block_start":"0","margin_block_end":"0","padding_block_start":"64","padding_block_end":"64","section_header":true,"section_footer":false,"background_color":"accent"}'
   '3:header_slot:0':
-    parent_uuid: d371f39b-3ad5-4920-afb1-23320aa47c8a
+    parent_uuid: 21ffd389-4bb0-458f-a177-071db703964f
     slot: header_slot
-    uuid: 1dfd51a0-5209-45e4-968b-57732f763e7f
-    component_id: sdc.byte_theme.heading
-    component_version: 6e6854ead521fa05
+    uuid: a6109649-fbdb-4c59-9e2f-3d74eb1a9b23
+    component_id: sdc.deploya.heading
+    component_version: d7c6acbc91a60ac1
     inputs: '{"heading_text":"More insights","level":2,"text_size":"default","text_color":"default","align":"center"}'
   '3:main_slot:0':
-    parent_uuid: d371f39b-3ad5-4920-afb1-23320aa47c8a
+    parent_uuid: 21ffd389-4bb0-458f-a177-071db703964f
     slot: main_slot
-    uuid: 0ab08fa6-8f5f-40f5-a662-cb824f8893f2
+    uuid: 2b121f4a-e7aa-45a1-be4c-4025ab51084c
     component_id: block.views_block.blog-related
-    component_version: d30c747ee7b1d2d7
+    component_version: 53eb9364540098d2
     inputs: '{"label":"Blog: Related blog posts","label_display":"0","views_label":"","items_per_page":null}'
-  4:
-    uuid: 4305752c-db60-48dc-837b-c7a12dd656fe
-    component_id: sdc.byte_theme.cta
-    component_version: 2b510bc2d13c6354
-    inputs: '{"heading_text":"Get ready to transform your operations","level":2,"text":"Sign up for a free trial and discover a world of possibilities to elevate your outreach and engagement strategies","text_align":"center"}'
-  '4:actions:0':
-    parent_uuid: 4305752c-db60-48dc-837b-c7a12dd656fe
-    slot: actions
-    uuid: 766d0781-cae3-471f-8d43-0f5f27659fbb
-    component_id: sdc.byte_theme.button
-    component_version: 8c253a9827f0ca84
-    inputs: '{"variant":"primary","size":"medium","disabled":false,"label":"Get started","icon":"arrow-right","icon_first":false}'
-  '4:actions:1':
-    parent_uuid: 4305752c-db60-48dc-837b-c7a12dd656fe
-    slot: actions
-    uuid: f61ffe08-6016-458e-b19f-7bef09f26382
-    component_id: sdc.byte_theme.button
-    component_version: 8c253a9827f0ca84
-    inputs: '{"variant":"secondary","size":"medium","disabled":false,"label":"Learn more","icon":"arrow-right","icon_first":false}'
 exposed_slots: {  }

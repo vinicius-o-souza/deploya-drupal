@@ -5,7 +5,6 @@ dependencies:
   config:
     - canvas.component.block.system_branding_block
     - canvas.component.block.system_menu_block.footer
-    - canvas.component.block.system_menu_block.secondary
     - canvas.component.block.system_menu_block.social
     - canvas.component.sdc.deploya.footer
     - canvas.component.sdc.deploya.text
@@ -34,10 +33,10 @@ component_tree:
   '0:footer_first:1':
     parent_uuid: d5e57893-6789-4c43-a2d9-ade66b113dc9
     slot: footer_first
-    uuid: 3ab19f01-69ff-426e-89c8-8c6317b2549a
-    component_id: block.system_menu_block.secondary
-    component_version: 2f5ebe22feed1255
-    inputs: '{"label":"Secondary navigation","label_display":"0","level":1,"depth":null,"expand_all_items":false}'
+    uuid: fbb0b35e-876e-428a-9b64-8099534b710e
+    component_id: block.system_menu_block.footer
+    component_version: 68bdb40e1ac48125
+    inputs: '{"label":"Footer","label_display":"0","level":1,"depth":null,"expand_all_items":false}'
   '0:footer_first:2':
     parent_uuid: d5e57893-6789-4c43-a2d9-ade66b113dc9
     slot: footer_first
@@ -48,13 +47,6 @@ component_tree:
   '0:footer_utility_first:0':
     parent_uuid: d5e57893-6789-4c43-a2d9-ade66b113dc9
     slot: footer_utility_first
-    uuid: fbb0b35e-876e-428a-9b64-8099534b710e
-    component_id: block.system_menu_block.footer
-    component_version: 68bdb40e1ac48125
-    inputs: '{"label":"Footer","label_display":"0","level":1,"depth":null,"expand_all_items":false}'
-  '0:footer_utility_last:0':
-    parent_uuid: d5e57893-6789-4c43-a2d9-ade66b113dc9
-    slot: footer_utility_last
     uuid: 6b8c54c5-08a9-4ce8-8404-4a798d0ae10f
     component_id: sdc.deploya.text
     component_version: 16c79c28a4108f9b

@@ -8,12 +8,7 @@ dependencies:
     - views
 _core:
   default_config_hash: hEV26dA50HTdONiFT-XqWTkzbyta8zZDw6ZrLkGLPgQ
-label: 'Blog: Latest blog posts'
-id: block.views_block.blog-latest
-source: block
-source_local_id: 'views_block:blog-latest'
-provider: views
-active_version: 2502069c92ce84d7
+active_version: 1b1af1b9db63d0f6
 versioned_properties:
   active:
     settings:
@@ -26,3 +21,19 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
+  2502069c92ce84d7:
+    settings:
+      default_settings:
+        id: 'views_block:blog-latest'
+        label: 'Blog: Latest blog posts'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Blog: Latest blog posts'
+id: block.views_block.blog-latest
+provider: views
+source: block
+source_local_id: 'views_block:blog-latest'

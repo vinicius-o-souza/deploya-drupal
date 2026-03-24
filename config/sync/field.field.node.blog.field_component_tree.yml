@@ -14,7 +14,7 @@ bundle: blog
 label: Components
 description: 'Stores a component tree for Canvas.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

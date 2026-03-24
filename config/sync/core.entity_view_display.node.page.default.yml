@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.field_component_tree
     - field.field.node.page.field_content
     - field.field.node.page.field_description
     - field.field.node.page.field_featured_image
@@ -44,11 +45,13 @@ content:
     weight: 1
     region: content
 hidden:
+  field_component_tree: true
   field_description: true
   field_seo_analysis: true
   field_seo_description: true
   field_seo_image: true
   field_seo_title: true
   field_tags: true
+  langcode: true
   links: true
   search_api_excerpt: true

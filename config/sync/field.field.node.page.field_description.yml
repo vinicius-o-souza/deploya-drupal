@@ -14,7 +14,7 @@ bundle: page
 label: Description
 description: 'Describe the page content. This appears as the description in search engine results.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

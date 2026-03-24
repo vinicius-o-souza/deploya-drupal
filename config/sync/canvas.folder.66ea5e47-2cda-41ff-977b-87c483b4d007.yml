@@ -6,6 +6,7 @@ name: System
 configEntityTypeId: component
 weight: 0
 items:
+  - block.language_block.language_interface
   - block.system_branding_block
   - block.system_breadcrumb_block
   - block.system_clear_cache_block

@@ -12,7 +12,7 @@ bundle: page
 label: 'SEO description'
 description: 'Write a description for search engines and social media sites.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
