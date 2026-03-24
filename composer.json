@@ -90,7 +90,8 @@
         "drupal/views_infinite_scroll": "^2",
         "drupal/webform": "^6.3-beta3",
         "drupal/yoast_seo": "^2.1",
-        "league/commonmark": "^2.4"
+        "league/commonmark": "^2.4",
+        "vinicius-o-souza/pokemon_api": "^4.0"
     },
     "require-dev": {
         "drupal/coder": "^9.0",
