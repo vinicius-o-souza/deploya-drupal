@@ -4,9 +4,18 @@ status: false
 dependencies:
   module:
     - navigation
-active_version: f84481a87841fd79
+active_version: b1e17ec4885768e0
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: navigation_user
+        label: User
+        label_display: '0'
+        provider: navigation
+    fallback_metadata:
+      slot_definitions: null
+  f84481a87841fd79:
     settings:
       default_settings:
         id: navigation_user

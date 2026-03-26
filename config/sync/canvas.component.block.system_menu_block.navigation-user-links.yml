@@ -6,9 +6,21 @@ dependencies:
     - system.menu.navigation-user-links
   module:
     - system
-active_version: c2da439fd84e7fa0
+active_version: 298f8d9d22cdc850
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: 'system_menu_block:navigation-user-links'
+        label: 'Navigation user links'
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
+  c2da439fd84e7fa0:
     settings:
       default_settings:
         id: 'system_menu_block:navigation-user-links'

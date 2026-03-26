@@ -4,9 +4,21 @@ status: false
 dependencies:
   module:
     - navigation
-active_version: ed9dc3bbe23286d0
+active_version: 6bff3fd95c9429fb
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: navigation_link
+        label: Link
+        label_display: '0'
+        provider: navigation
+        title: ''
+        uri: ''
+        icon_class: ''
+    fallback_metadata:
+      slot_definitions: null
+  ed9dc3bbe23286d0:
     settings:
       default_settings:
         id: navigation_link

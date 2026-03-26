@@ -4,9 +4,18 @@ status: false
 dependencies:
   module:
     - dashboard
-active_version: e5e448dc6414d450
+active_version: b8299fffa95ae6ca
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: navigation_dashboard
+        label: 'Navigation Dashboard'
+        label_display: '0'
+        provider: dashboard
+    fallback_metadata:
+      slot_definitions: null
+  e5e448dc6414d450:
     settings:
       default_settings:
         id: navigation_dashboard
