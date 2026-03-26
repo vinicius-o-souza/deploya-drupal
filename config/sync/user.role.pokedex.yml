@@ -1,0 +1,15 @@
+uuid: a5f8f7b3-403a-44b7-b5cb-c62c5c504407
+langcode: en
+status: true
+dependencies:
+  module:
+    - node_view_permissions
+    - simple_oauth
+id: pokedex
+label: 'Pokedex user'
+weight: 4
+is_admin: false
+permissions:
+  - 'grant simple_oauth codes'
+  - 'view any pokemon content'
+  - 'view own pokemon content'

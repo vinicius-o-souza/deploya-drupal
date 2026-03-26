@@ -1,0 +1,14 @@
+uuid: d5309beb-2810-4796-a661-5507effc05f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pokedex
+  module:
+    - user
+id: user_add_role_action.pokedex
+label: 'Add the Pokedex role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: pokedex

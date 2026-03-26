@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Enable XDebug",
+      "type": "shell",
+      "command": "ddev xdebug on",
+      "isBackground": false,
+      "problemMatcher": []
+    },
+    {
+      "label": "Disable XDebug",
+      "type": "shell",
+      "command": "ddev xdebug off",
+      "isBackground": false,
+      "problemMatcher": []
+    }
+  ]
+}

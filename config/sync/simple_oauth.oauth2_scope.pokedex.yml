@@ -1,0 +1,22 @@
+uuid: ee6fa2e8-bede-4b0d-8020-cb438ca5f34c
+langcode: en
+status: true
+dependencies: {  }
+id: pokedex
+name: pokedex
+description: 'Pokedex Scope'
+grant_types:
+  authorization_code:
+    status: true
+    description: 'Authorize into the Pokedex APP'
+  refresh_token:
+    status: true
+    description: 'Authorize into the Pokedex APP'
+  client_credentials:
+    status: false
+    description: ''
+umbrella: false
+parent: _none
+granularity_id: role
+granularity_configuration:
+  role: pokedex

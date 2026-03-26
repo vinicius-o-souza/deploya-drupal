@@ -15,6 +15,7 @@ module:
   checklistapi: 0
   ckeditor5: 0
   coffee: 0
+  consumers: 0
   content_moderation: 0
   contextual: 0
   crop: 0
@@ -51,6 +52,8 @@ module:
   image: 0
   jquery_ui: 0
   jquery_ui_resizable: 0
+  jsonapi: 0
+  jsonapi_extras: 0
   klaro: 0
   layout_builder: 0
   layout_discovery: 0
@@ -73,6 +76,7 @@ module:
   navigation: 0
   navigation_extra_tools: 0
   node: 0
+  node_view_permissions: 0
   options: 0
   package_manager: 0
   page_cache: 0
@@ -91,6 +95,8 @@ module:
   search_api_db: 0
   search_api_exclude: 0
   seo_checklist: 0
+  serialization: 0
+  simple_oauth: 0
   simple_sitemap: 0
   svg_image: 0
   symfony_mailer_lite: 0

@@ -1,0 +1,14 @@
+uuid: 7b9340a9-e79e-4fcc-8f39-a1aeaf19b4c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pokedex
+  module:
+    - user
+id: user_remove_role_action.pokedex
+label: 'Remove the Pokedex role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: pokedex
