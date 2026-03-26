@@ -1,8 +1,5 @@
-/* IBM Plex Sans — body text (300-700, normal + italic) */
+/* IBM Plex Mono — primary font for all text (monospaced authority) */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* IBM Plex Sans — fallback for long-form body text if needed */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
-
-/* IBM Plex Serif — headings (300-700, normal + italic) */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
-
-/* IBM Plex Mono — code and terminal elements (400-700, normal + italic) */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");

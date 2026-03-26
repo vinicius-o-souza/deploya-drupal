@@ -120,8 +120,6 @@ final class ThemeHooks {
   #[Hook('preprocess_html')]
   public function preprocessHtml(array &$variables): void {
     $variables['scheme'] = $this->themeSettings->getSetting('scheme');
-    // Get the theme base path for font preloading.
-    $variables['deploya_path'] = $this->requestStack->getCurrentRequest()->getBasePath() . '/' . $this->themeList->getPath('deploya');
   }
 
   /**

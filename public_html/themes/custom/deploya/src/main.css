@@ -7,12 +7,17 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-high: var(--surface-container-high);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-dim: var(--primary-dim);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-dim: var(--secondary-dim);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
@@ -21,15 +26,17 @@
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
+  --color-outline-variant: var(--outline-variant);
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
   --font-serif: var(--font-serif);
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  /* Zero radius — "No rounded corners" rule */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
 
   --shadow-2xs: var(--shadow-2xs);
   --shadow-xs: var(--shadow-xs);
@@ -42,47 +49,51 @@
 }
 
 @theme {
-  --text-9xl: 7.5rem; /* 120px */
-  --text-9xl--line-height: 1; /* 120px */
+  /* Display Large: 3.5rem — high-impact hero statements */
+  --text-9xl: 7.5rem;
+  --text-9xl--line-height: 1;
 
-  --text-8xl: 6rem; /* 96px */
-  --text-8xl--line-height: 1; /* 96px */
+  --text-8xl: 6rem;
+  --text-8xl--line-height: 1;
 
-  --text-7xl: 4.5rem; /* 72px */
-  --text-7xl--line-height: 1; /* 72px */
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 1;
 
-  --text-6xl: 3.75rem; /* 60px */
-  --text-6xl--line-height: 1; /* 60px */
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1;
 
-  --text-5xl: 3rem; /* 48px */
-  --text-5xl--line-height: 1.083333; /* 52px */
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1.083333;
 
-  --text-4xl: 2.5rem; /* 40px */
-  --text-4xl--line-height: 1.2; /* 48px */
+  /* Headline Medium: 1.75rem — section headers */
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 1.2;
 
-  --text-3xl: 2rem; /* 32px */
-  --text-3xl--line-height: 1.3125; /* 42px */
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 1.3125;
 
-  --text-2xl: 1.5rem; /* 24px */
-  --text-2xl--line-height: 1.3333; /* 32px */
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.3333;
 
-  --text-xl: 1.25rem; /* 20px */
-  --text-xl--line-height: 1.35; /* 30px */
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.35;
 
-  --text-lg: 1.125rem; /* 18px */
-  --text-lg--line-height: 1.5; /* 27px */
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5;
 
-  --text-base: 1rem; /* 16px */
-  --text-base--line-height: 1.5; /* 24px */
+  /* Body Medium: 0.875rem — generous line-height for monospaced readability */
+  --text-base: 1rem;
+  --text-base--line-height: 1.6;
 
   --text-md: var(--text-base);
   --text-md--line-height: var(--text-base--line-height);
 
-  --text-sm: 0.875rem; /* 14px */
-  --text-sm--line-height: 1.5; /* 21px */
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.6;
 
-  --text-xs: 0.75rem; /* 12px */
-  --text-xs--line-height: 1.5; /* 18px */
+  /* Label Small: 0.6875rem — metadata, status indicators */
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
 
   --font-weight-light: 300;
   --font-weight-normal: 400;
@@ -93,14 +104,49 @@
   --spacing: 4px;
 }
 
-/* Custom theme classes. */
+/* ─── SCANLINE OVERLAY (2% opacity across all surfaces) ─── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 217, 255, 0.015) 2px, rgba(0, 217, 255, 0.015) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ─── NOISE TEXTURE (3% opacity grain on all surfaces) ─── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.5;
+}
+
+/* ─── SCROLLBAR (terminal-style) ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+/* ─── BASE STYLES ─── */
 @layer base {
   body {
     @apply bg-background font-normal text-foreground antialiased;
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
   }
 
   p {
     @apply mb-4;
+    line-height: 1.6;
   }
 
   ul,
@@ -108,17 +154,23 @@
     @apply list-disc ps-5;
   }
 
-  /* Set base heading styles since Tailwind sets them to inherit. */
+  /* Headings: Monospaced authority with tight letter-spacing */
   h1 {
-    @apply text-5xl font-semibold md:text-6xl lg:text-7xl;
+    font-family: var(--font-serif);
+    @apply text-5xl font-bold md:text-6xl lg:text-7xl;
+    letter-spacing: -0.02em;
   }
 
   h2 {
-    @apply text-3xl font-semibold md:text-4xl lg:text-5xl;
+    font-family: var(--font-serif);
+    @apply text-3xl font-bold uppercase md:text-4xl lg:text-5xl;
+    letter-spacing: -0.02em;
   }
 
   h3 {
+    font-family: var(--font-serif);
     @apply text-2xl font-semibold md:text-3xl;
+    letter-spacing: -0.01em;
   }
 
   h4 {
@@ -152,8 +204,12 @@
     @apply text-inherit italic;
   }
 
+  /* "No-Line" rule — use background shifts, not borders */
   hr {
-    @apply my-4 border-t border-muted;
+    @apply my-8;
+    border: none;
+    height: 1px;
+    background: var(--surface-container-high);
   }
 
   table,
@@ -165,7 +221,6 @@
   sup {
     font-size: 60%;
     top: -0.5em;
-    /* ^ match normalize to avoid conflicts. */
   }
 
   .hide-scrollbar-x::-webkit-scrollbar {
@@ -173,12 +228,26 @@
   }
 
   .hide-scrollbar-x {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background: rgba(0, 255, 184, 0.3);
+    color: #f8f9fa;
+  }
+
+  /* Focus styles — Ghost Border with ambient glow */
+  :focus-visible {
+    outline: 1px solid rgba(52, 58, 64, 0.15);
+    outline-offset: 2px;
+    box-shadow: 0 0 15px rgba(0, 255, 184, 0.2);
   }
 }
 
 @layer components {
+  /* ─── FORMS (Terminal Prompt style) ─── */
   .webform-submission-form {
     .visually-hidden {
       @apply sr-only;
@@ -197,26 +266,30 @@
 
   label,
   .fieldset-legend {
-    @apply mb-1 block text-sm font-semibold md:text-base;
+    @apply mb-1 block text-xs font-semibold tracking-wider uppercase md:text-sm;
+    color: var(--muted-foreground);
   }
 
   .form-item:focus-within,
   .fieldgroup:focus-within {
     > label,
     .fieldset-legend {
-      @apply text-input;
+      @apply text-primary;
     }
   }
 
   .webform-element-description {
     @apply mt-2 text-xs;
+    color: var(--muted-foreground);
   }
 
   .form-required::after {
-    @apply ml-1 text-red-500;
+    @apply ml-1;
     content: "*";
+    color: var(--primary);
   }
 
+  /* Input fields: "Terminal Prompt" — no background, bottom border only */
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -228,7 +301,10 @@
   input[type="time"],
   textarea,
   select {
-    @apply w-full border-0 border-b bg-transparent p-1.5 text-base outline-none;
+    @apply w-full border-0 border-b p-2 text-sm;
+    background: transparent;
+    border-color: var(--outline-variant);
+    color: var(--foreground);
   }
 
   input[type="text"]:focus,
@@ -242,43 +318,66 @@
   input[type="time"]:focus,
   textarea:focus,
   select:focus {
-    @apply border-accent bg-muted/60 shadow-sm;
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 1px 0 0 var(--primary);
   }
 
   select:focus {
-    @apply text-accent;
+    color: var(--primary);
   }
 
   input::placeholder,
   textarea::placeholder,
   select {
-    @apply text-muted-foreground;
+    color: var(--muted-foreground);
   }
 
+  /* Buttons: "Execution Units" — sharp corners, 3-layer box-shadow */
   .form-submit,
   input.button {
-    @apply cursor-pointer rounded-lg bg-primary px-5 py-2 text-base text-primary-foreground;
+    @apply cursor-pointer px-6 py-3 text-sm font-semibold tracking-wider uppercase;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border: none;
+    border-radius: 0px;
+    box-shadow:
+      inset 0 0 8px rgba(255, 255, 255, 0.5),
+      0 0 12px rgba(0, 255, 184, 0.25),
+      4px 4px 0px #000000;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .form-submit:hover,
   input.button:hover {
-    @apply bg-primary/85;
+    transform: scale(1.02);
+    box-shadow:
+      inset 0 0 12px rgba(255, 255, 255, 0.6),
+      0 0 20px rgba(0, 255, 184, 0.4),
+      4px 4px 0px #000000;
+  }
+
+  .form-submit:active,
+  input.button:active {
+    transform: scale(0.98);
   }
 
   .form-item--error input,
   .form-item--error textarea,
   .form-item--error select {
-    @apply border-red-500;
+    border-color: var(--destructive);
   }
 
   .form-item--error input:focus,
   .form-item--error textarea:focus,
   .form-item--error select:focus {
-    @apply border-red-500 shadow-sm;
+    border-color: var(--destructive);
+    box-shadow: 0 1px 0 0 var(--destructive);
   }
 
   .form-item--error-message {
-    @apply mt-1 mb-3 basis-full text-sm text-red-500;
+    @apply mt-1 mb-3 basis-full text-sm;
+    color: var(--destructive);
   }
 
   .webform-options-display-one-column {
@@ -311,8 +410,6 @@
 }
 
 @layer utilities {
-  /* For custom utility classes with highest precedence. */
-
   /* Set the container query context for full-width elements. */
   .layout-content {
     container-type: inline-size;
@@ -355,7 +452,7 @@
   }
 
   .heading-responsive-6xl {
-    @apply text-4xl md:text-5xl xl:text-6xl; /* H1 */
+    @apply text-4xl md:text-5xl xl:text-6xl;
   }
 
   .heading-responsive-5xl {
@@ -363,18 +460,84 @@
   }
 
   .heading-responsive-4xl {
-    @apply text-3xl xl:text-4xl; /* H2 */
+    @apply text-3xl xl:text-4xl;
   }
 
   .heading-responsive-3xl {
-    @apply text-2xl xl:text-3xl; /* H3 */
+    @apply text-2xl xl:text-3xl;
   }
 
   .heading-responsive-2xl {
-    @apply text-xl md:text-2xl; /* H4 */
+    @apply text-xl md:text-2xl;
   }
 
   .heading-responsive-xl {
-    @apply text-lg md:text-xl; /* H5 */
+    @apply text-lg md:text-xl;
+  }
+
+  /* ─── GRID BACKGROUND (24px structural anchors) ─── */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0, 217, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 217, 255, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* ─── GLOW ORB backgrounds ─── */
+  .glow-orb-primary {
+    position: relative;
+  }
+  .glow-orb-primary::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 184, 0.05) 0%, transparent 70%);
+    filter: blur(120px);
+    pointer-events: none;
+    top: -150px;
+    left: -150px;
+    z-index: 0;
+  }
+
+  .glow-orb-secondary {
+    position: relative;
+  }
+  .glow-orb-secondary::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 217, 255, 0.05) 0%, transparent 70%);
+    filter: blur(120px);
+    pointer-events: none;
+    bottom: -100px;
+    right: -100px;
+    z-index: 0;
+  }
+
+  /* ─── AMBIENT GLOW (hover/active state) ─── */
+  .ambient-glow:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 184, 0.2);
+  }
+
+  /* ─── LABEL SMALL styling (_STATUS: ACTIVE) ─── */
+  .label-system {
+    @apply text-xs font-semibold tracking-wider uppercase;
+    color: var(--muted-foreground);
+  }
+
+  /* ─── CARD SCANLINE overlay ─── */
+  .card-scanline {
+    position: relative;
+  }
+  .card-scanline::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 217, 255, 0.02) 2px, rgba(0, 217, 255, 0.02) 4px);
+    pointer-events: none;
+    z-index: 1;
   }
 }
