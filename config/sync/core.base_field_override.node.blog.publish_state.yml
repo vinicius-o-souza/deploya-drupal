@@ -1,0 +1,20 @@
+uuid: ef4eb321-33b2-46b0-a49c-7e75449d1f5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+  module:
+    - options
+id: node.blog.publish_state
+field_name: publish_state
+entity_type: node
+bundle: blog
+label: 'Publish state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

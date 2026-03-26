@@ -1,0 +1,13 @@
+uuid: 9fcc00ad-d3e3-4652-8b90-21dd645969cd
+langcode: en
+status: true
+dependencies: {  }
+name: Card
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.deploya.card
+  - sdc.deploya.card-icon
+  - sdc.deploya.card-logo
+  - sdc.deploya.card-pricing
+  - sdc.deploya.card-testimonial

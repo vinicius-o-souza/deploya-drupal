@@ -1,0 +1,20 @@
+uuid: 74a28b84-726b-4ab5-8cce-ca6cb0845b2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+  module:
+    - metatag
+id: node.blog.metatag
+field_name: metatag
+entity_type: node
+bundle: blog
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

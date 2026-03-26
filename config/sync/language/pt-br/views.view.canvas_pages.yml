@@ -1,0 +1,80 @@
+label: Páginas
+display:
+  default:
+    display_title: Padrão
+    display_options:
+      title: Páginas
+      fields:
+        edit_canvas_page:
+          label: Ações
+          text: editar
+        title:
+          label: Título
+          separator: ', '
+        status:
+          label: Status
+          settings:
+            format_custom_false: 'Não publicado'
+            format_custom_true: Publicado
+          separator: ', '
+        owner:
+          label: Autor
+          separator: ', '
+        changed:
+          label: Atualizado
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Redefinir
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Ascendente
+          sort_desc_label: Decrescente
+      filters:
+        title:
+          expose:
+            label: Título
+        status:
+          expose:
+            label: Publicado
+          group_info:
+            label: Publicado
+            group_items:
+              1:
+                title: Publicado
+              2:
+                title: 'Não publicado'
+  page_1:
+    display_title: Página
+    display_options:
+      fields:
+        title:
+          label: Título
+          separator: ', '
+        status:
+          label: Status
+          settings:
+            format_custom_false: 'Não publicado'
+            format_custom_true: Publicado
+          separator: ', '
+        owner:
+          label: Autor
+          separator: ', '
+        changed:
+          label: Atualizado
+          separator: ', '
+        operations:
+          label: Operações
+      pager:
+        options:
+          tags:
+            next: 'Avançar ›'
+            previous: '‹ Voltar'
+            first: '« Primeiro'
+            last: 'Último »'
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
+      menu:
+        title: Páginas

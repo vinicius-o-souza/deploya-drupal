@@ -1,0 +1,20 @@
+uuid: 4caa492b-b0f0-41fa-be4c-0cc062c9fc6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.document
+  module:
+    - options
+id: media.document.unpublish_state
+field_name: unpublish_state
+entity_type: media
+bundle: document
+label: 'Unpublish state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

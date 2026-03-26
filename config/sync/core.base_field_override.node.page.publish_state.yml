@@ -1,0 +1,20 @@
+uuid: d141a6a4-8165-4040-b57d-8af6c2703e7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - options
+id: node.page.publish_state
+field_name: publish_state
+entity_type: node
+bundle: page
+label: 'Publish state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

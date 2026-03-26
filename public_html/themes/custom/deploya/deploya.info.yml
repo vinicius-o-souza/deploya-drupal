@@ -1,0 +1,16 @@
+name: deploya
+type: theme
+"base theme": false
+libraries:
+  - deploya/global
+logo: logo-dark.svg
+description: "Front-end theme for the deploya site template."
+core_version_requirement: ^11.3
+generator: "mercury:1.0.0-beta1"
+regions:
+  content: Content
+  header: Header
+  footer: Footer
+dependencies:
+  - "canvas:canvas"
+  - "cva:cva"

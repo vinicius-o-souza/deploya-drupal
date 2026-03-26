@@ -1,0 +1,53 @@
+uuid: e97a6ee9-0625-4d29-8b70-c9f433e6317d
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_branding_block
+    - canvas.component.block.system_menu_block.footer
+    - canvas.component.block.system_menu_block.social
+    - canvas.component.sdc.deploya.footer
+    - canvas.component.sdc.deploya.text
+    - filter.format.canvas_html_block
+  module:
+    - options
+    - text
+  theme:
+    - deploya
+id: deploya.footer
+region: footer
+theme: deploya
+component_tree:
+  0:
+    uuid: d5e57893-6789-4c43-a2d9-ade66b113dc9
+    component_id: sdc.deploya.footer
+    component_version: d696cea1796b650e
+    inputs: '{"align":true}'
+  '0:footer_first:0':
+    parent_uuid: d5e57893-6789-4c43-a2d9-ade66b113dc9
+    slot: footer_first
+    uuid: 2f4daeed-1bb0-422e-a7e7-93b54f730635
+    component_id: block.system_branding_block
+    component_version: b168140fdcaebae5
+    inputs: '{"label":"Site branding","label_display":"0","use_site_logo":true,"use_site_name":false,"use_site_slogan":false}'
+  '0:footer_first:1':
+    parent_uuid: d5e57893-6789-4c43-a2d9-ade66b113dc9
+    slot: footer_first
+    uuid: fbb0b35e-876e-428a-9b64-8099534b710e
+    component_id: block.system_menu_block.footer
+    component_version: 68bdb40e1ac48125
+    inputs: '{"label":"Footer","label_display":"0","level":1,"depth":null,"expand_all_items":false}'
+  '0:footer_first:2':
+    parent_uuid: d5e57893-6789-4c43-a2d9-ade66b113dc9
+    slot: footer_first
+    uuid: 7ff72e9d-df09-49cf-b0ad-2fb6b3499706
+    component_id: block.system_menu_block.social
+    component_version: 61f1f0168c94b6b6
+    inputs: '{"label":"Social","label_display":"0","level":1,"depth":null,"expand_all_items":false}'
+  '0:footer_utility_first:0':
+    parent_uuid: d5e57893-6789-4c43-a2d9-ade66b113dc9
+    slot: footer_utility_first
+    uuid: 6b8c54c5-08a9-4ce8-8404-4a798d0ae10f
+    component_id: sdc.deploya.text
+    component_version: 16c79c28a4108f9b
+    inputs: '{"text":{"value":"\u003Cp\u003ECopyright \u00a9 2026 deploya | Todos os direitos reservados\u003C\/p\u003E","format":"canvas_html_block"},"text_size":"normal","text_color":"default"}'

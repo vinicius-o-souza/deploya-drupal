@@ -1,0 +1,26 @@
+uuid: 83795eeb-d8ca-46aa-bf16-a3165ec05031
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - media.type.svg_image
+  module:
+    - canvas
+id: canvas_page.canvas_page.image
+field_name: image
+entity_type: canvas_page
+bundle: canvas_page
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings:
+    target_bundles:
+      - image
+      - svg_image
+field_type: entity_reference

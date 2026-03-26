@@ -1,0 +1,13 @@
+uuid: 87e679e2-59b4-4b67-bce9-bd10ec4d66d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - redirect
+_core:
+  default_config_hash: y734AXEpjry1Ppff_hQQBFQGJvYjF0fk1JoWtp5q2JY
+id: redirect.redirect
+target_entity_type_id: redirect
+target_bundle: redirect
+default_langcode: site_default
+language_alterable: true

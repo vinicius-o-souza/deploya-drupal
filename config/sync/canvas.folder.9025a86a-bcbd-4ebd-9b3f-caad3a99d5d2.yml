@@ -1,0 +1,14 @@
+uuid: 9025a86a-bcbd-4ebd-9b3f-caad3a99d5d2
+langcode: en
+status: true
+dependencies: {  }
+name: Layout
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.deploya.accordion
+  - sdc.deploya.accordion-container
+  - sdc.deploya.footer
+  - sdc.deploya.group
+  - sdc.deploya.navbar
+  - sdc.deploya.section

@@ -1,0 +1,18 @@
+uuid: 53777c75-28fb-4a39-91c1-fe71600f543e
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas
+id: canvas_page.canvas_page.components
+field_name: components
+entity_type: canvas_page
+bundle: canvas_page
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: component_tree

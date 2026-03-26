@@ -1,0 +1,22 @@
+uuid: c18d0678-7b87-436b-868b-e6908e06ed32
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.svg_image
+id: media.svg_image.status
+field_name: status
+entity_type: media
+bundle: svg_image
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: true
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

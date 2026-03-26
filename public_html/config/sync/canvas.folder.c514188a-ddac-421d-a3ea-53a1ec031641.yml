@@ -1,8 +1,0 @@
-uuid: c514188a-ddac-421d-a3ea-53a1ec031641
-langcode: en
-status: true
-dependencies: {  }
-name: Announcements
-configEntityTypeId: component
-weight: 0
-items: {  }

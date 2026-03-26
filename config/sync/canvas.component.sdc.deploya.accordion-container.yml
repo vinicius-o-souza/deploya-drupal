@@ -1,0 +1,21 @@
+uuid: baf386d7-84f6-4e8d-add1-f171fb5df50d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - deploya
+active_version: 6d6367123c15a82a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        accordion_content:
+          title: 'Accordion content'
+          description: 'Only one of collapsible sections added can be open at a time.'
+label: 'Accordion container'
+id: sdc.deploya.accordion-container
+provider: deploya
+source: sdc
+source_local_id: 'deploya:accordion-container'

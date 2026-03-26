@@ -1,0 +1,63 @@
+uuid: 71c53df1-472b-487a-aec4-007215b2832b
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_breadcrumb_block
+    - canvas.component.sdc.deploya.heading
+    - canvas.component.sdc.deploya.image
+    - canvas.component.sdc.deploya.section
+    - canvas.component.sdc.deploya.text
+    - core.base_field_override.node.page.title
+    - core.entity_view_mode.node.full
+    - field.field.media.image.field_media_image
+    - field.field.node.page.field_content
+    - field.field.node.page.field_featured_image
+    - filter.format.content_format
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - node.type.page
+  module:
+    - file
+    - media
+    - node
+    - options
+_core:
+  default_config_hash: 8kIYuZmlttMref5NyN8TO21hs1aeMF00ePnVuyw884U
+id: node.page.full
+content_entity_type_id: node
+content_entity_type_bundle: page
+content_entity_type_view_mode: full
+component_tree:
+  0:
+    uuid: c28fd637-eebb-43bd-af62-7043e28f6abc
+    component_id: block.system_breadcrumb_block
+    component_version: 5c765ac0b278eba4
+    inputs: '{"label":"Breadcrumbs","label_display":"0"}'
+  1:
+    uuid: 7f96402a-f4d9-44d6-afb0-c33f2aa3cf88
+    component_id: sdc.deploya.section
+    component_version: a917d5c9be8f2830
+    inputs: '{"width":"75%","columns":"100","mobile_columns":"1","margin_block_start":"48","margin_block_end":"48","padding_block_start":"0","padding_block_end":"0","section_header":true,"section_footer":true}'
+  '1:header_slot:0':
+    parent_uuid: 7f96402a-f4d9-44d6-afb0-c33f2aa3cf88
+    slot: header_slot
+    uuid: 56eb3746-a462-4809-bb1d-b312d38ad102
+    component_id: sdc.deploya.heading
+    component_version: d7c6acbc91a60ac1
+    inputs: '{"heading_text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:page\u241dtitle\u241e\u241fvalue"},"level":1,"text_size":"heading-responsive-8xl","text_color":"default","align":"center"}'
+  '1:main_slot:0':
+    parent_uuid: 7f96402a-f4d9-44d6-afb0-c33f2aa3cf88
+    slot: main_slot
+    uuid: 7e4ebbe9-2b56-43f9-bb64-dbf40a295b04
+    component_id: sdc.deploya.image
+    component_version: 8185d7ac26d59949
+    inputs: '{"media":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:page\u241dfield_featured_image\u241e\u241fentity\u241c\u241centity:media:image\u241dfield_media_image\u241e\u241f{src\u21a0src_with_alternate_widths,alt\u21a0alt,width\u21a0width,height\u21a0height}"},"size":"16:9","radius":"small"}'
+  '1:main_slot:1':
+    parent_uuid: 7f96402a-f4d9-44d6-afb0-c33f2aa3cf88
+    slot: main_slot
+    uuid: f3994478-ad43-4a04-9a19-bf0935cc0f88
+    component_id: sdc.deploya.text
+    component_version: 16c79c28a4108f9b
+    inputs: '{"text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:page\u241dfield_content\u241e\u241fprocessed"},"text_size":"normal","text_color":"default"}'
+exposed_slots: {  }

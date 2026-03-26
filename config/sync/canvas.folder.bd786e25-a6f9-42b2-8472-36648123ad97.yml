@@ -1,0 +1,17 @@
+uuid: bd786e25-a6f9-42b2-8472-36648123ad97
+langcode: en
+status: true
+dependencies: {  }
+name: Base
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.deploya.anchor
+  - sdc.deploya.badge
+  - sdc.deploya.blockquote
+  - sdc.deploya.button
+  - sdc.deploya.heading
+  - sdc.deploya.icon
+  - sdc.deploya.image
+  - sdc.deploya.text
+  - sdc.deploya.video

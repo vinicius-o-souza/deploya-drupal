@@ -1,0 +1,18 @@
+uuid: 07ede035-e169-468c-be17-e5eacc90a13f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+id: node.blog.publish_on
+field_name: publish_on
+entity_type: node
+bundle: blog
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

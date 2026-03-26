@@ -1,0 +1,19 @@
+uuid: cbacacab-eb0f-4d03-971f-f7c0a08042e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas
+    - path
+id: canvas_page.canvas_page.path
+field_name: path
+entity_type: canvas_page
+bundle: canvas_page
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

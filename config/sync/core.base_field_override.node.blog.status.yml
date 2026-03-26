@@ -1,0 +1,22 @@
+uuid: 1d9047b6-7213-4523-9d8b-d189594b93db
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+id: node.blog.status
+field_name: status
+entity_type: node
+bundle: blog
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: true
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 226c295a-b252-4a12-be87-a96851341915
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas
+id: canvas_page.canvas_page.owner
+field_name: owner
+entity_type: canvas_page
+bundle: canvas_page
+label: 'User ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\canvas\Entity\Page::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

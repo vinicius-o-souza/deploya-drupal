@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
+langcode: en
+uuid: c604e591-bd66-4b71-9a89-0432dd8b01b9
+name: deploya
+mail: vinicius.oliveira.developer@gmail.com
+slogan: ''
+page:
+  403: /user/login
+  404: /404
+  front: /page/11
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null
