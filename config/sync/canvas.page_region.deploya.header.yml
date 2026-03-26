@@ -5,7 +5,6 @@ dependencies:
   config:
     - canvas.component.block.system_branding_block
     - canvas.component.block.system_menu_block.main
-    - canvas.component.block.system_menu_block.social
     - canvas.component.sdc.deploya.button
     - canvas.component.sdc.deploya.navbar
   module:
@@ -24,17 +23,10 @@ component_tree:
   '0:links:0':
     parent_uuid: 1bd7617a-7152-402c-a3fb-8ae959805d5e
     slot: links
-    uuid: 6948a174-7235-423c-9631-db048c75268a
-    component_id: block.system_menu_block.social
-    component_version: d38218d3d4c54c85
-    inputs: '{"label":"Social","label_display":"0","level":1,"depth":null,"expand_all_items":false}'
-  '0:links:1':
-    parent_uuid: 1bd7617a-7152-402c-a3fb-8ae959805d5e
-    slot: links
     uuid: 5aa71025-5c72-480f-aa2e-b85bf1aff878
     component_id: sdc.deploya.button
     component_version: 8c253a9827f0ca84
-    inputs: '{"variant":"secondary","label":"Get in touch","size":"medium","icon":"arrow-right","mobile_width":false,"icon_first":false,"disabled":false}'
+    inputs: '{"variant":"primary","label":"Get in touch","size":"medium","icon":"arrow-right","mobile_width":false,"icon_first":false,"disabled":false,"href":"\/contact"}'
   '0:logo:0':
     parent_uuid: 1bd7617a-7152-402c-a3fb-8ae959805d5e
     slot: logo
