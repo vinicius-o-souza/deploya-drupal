@@ -87,3 +87,6 @@
 *.patch
 *.DS_Store
 *.Thumbs.db
+
+# Private
+/private

@@ -5,6 +5,7 @@ dependencies:
   module:
     - klaro
     - media
+    - node_view_permissions
     - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
@@ -15,4 +16,8 @@ is_admin: false
 permissions:
   - 'access content'
   - 'use klaro'
+  - 'view any blog content'
+  - 'view any page content'
   - 'view media'
+  - 'view own blog content'
+  - 'view own page content'
