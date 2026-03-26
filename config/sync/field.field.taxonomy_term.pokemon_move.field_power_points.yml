@@ -1,0 +1,25 @@
+uuid: 5fe59f6b-226a-4516-a241-a1f293e59e67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_power_points
+    - taxonomy.vocabulary.pokemon_move
+_core:
+  default_config_hash: rqHoODap_irJ9r7GI2RaD92sImDZSIyNhkS2F5REwsI
+id: taxonomy_term.pokemon_move.field_power_points
+field_name: field_power_points
+entity_type: taxonomy_term
+bundle: pokemon_move
+label: 'Power Points'
+description: 'Power points. The number of times this move can be used.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,25 @@
+uuid: 3d7e7026-23d7-4375-8ca2-567245ec730d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_accuracy
+    - taxonomy.vocabulary.pokemon_move
+_core:
+  default_config_hash: nLm3Pw4ffsMfoamUKkriOezbpsrYiIhFJSqOTC3pO9g
+id: taxonomy_term.pokemon_move.field_accuracy
+field_name: field_accuracy
+entity_type: taxonomy_term
+bundle: pokemon_move
+label: Accuracy
+description: 'The percent value of how likely this move is to be successful.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: '%'
+field_type: integer

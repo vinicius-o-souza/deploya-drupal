@@ -1,0 +1,25 @@
+uuid: a729bc57-5993-45ee-a76c-78b3d8fe4c7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_legendary
+    - node.type.pokemon
+_core:
+  default_config_hash: EwIMdumSRfc27-gxryJ0xuI2UH6BQGKEZ_uOMjaj5QE
+id: node.pokemon.field_pokemon_legendary
+field_name: field_pokemon_legendary
+entity_type: node
+bundle: pokemon
+label: Legendary
+description: 'Whether or not this is a legendary Pokémon.'
+required: true
+translatable: false
+default_value:
+  -
+    value: false
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

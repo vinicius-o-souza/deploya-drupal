@@ -1,0 +1,26 @@
+uuid: 71ff0243-1186-41de-8914-f38a82100966
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.pokemon_generation.field_pokeapi_id
+    - taxonomy.vocabulary.pokemon_generation
+  module:
+    - text
+_core:
+  default_config_hash: a1g6s7km9WDuIbI-rDnkiPvRg8xljJem8ZEYZdF1UwU
+id: taxonomy_term.pokemon_generation.default
+targetEntityType: taxonomy_term
+bundle: pokemon_generation
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_pokeapi_id: true
+  search_api_excerpt: true

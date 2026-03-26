@@ -1,0 +1,25 @@
+uuid: 980fbf71-9059-41e3-a058-91d81675c971
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_height
+    - node.type.pokemon
+_core:
+  default_config_hash: vSSPf37yLwGFO9wGqD2y0ddtl31ebmpC-_MXEJyoKwc
+id: node.pokemon.field_pokemon_height
+field_name: field_pokemon_height
+entity_type: node
+bundle: pokemon
+label: Height
+description: 'The height of this Pokémon in meters.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: null
+  prefix: ''
+  suffix: m
+field_type: decimal

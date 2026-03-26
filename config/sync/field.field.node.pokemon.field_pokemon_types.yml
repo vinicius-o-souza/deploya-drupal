@@ -1,0 +1,31 @@
+uuid: 73dbfdfa-c381-4204-8d2f-2b086068cbc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_types
+    - node.type.pokemon
+    - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: ioLj0R5jn0zebewLKtO3wDRZgC2YQ3_Pl4tJoAABNAo
+id: node.pokemon.field_pokemon_types
+field_name: field_pokemon_types
+entity_type: node
+bundle: pokemon
+label: 'Pokemon Types'
+description: 'The pokemon types'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

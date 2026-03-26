@@ -1,0 +1,22 @@
+uuid: b92fdb81-3646-434d-8f11-c4462da67536
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: '-2yW-FrWozJbkCC4pXOHT1tWPVm_z-K4IgRRYVIGmvs'
+id: taxonomy_term.field_pokeapi_id
+field_name: field_pokeapi_id
+entity_type: taxonomy_term
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -13685,16 +13685,16 @@
         },
         {
             "name": "vinicius-o-souza/pokemon_api",
-            "version": "v4.2",
+            "version": "v4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinicius-o-souza/pokemon_api.git",
-                "reference": "65865c61b772d21d7ac86c232f02e0520046cd72"
+                "reference": "cb33f8ac161df5bb57063f55fd55043dfed6b627"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinicius-o-souza/pokemon_api/zipball/65865c61b772d21d7ac86c232f02e0520046cd72",
-                "reference": "65865c61b772d21d7ac86c232f02e0520046cd72",
+                "url": "https://api.github.com/repos/vinicius-o-souza/pokemon_api/zipball/cb33f8ac161df5bb57063f55fd55043dfed6b627",
+                "reference": "cb33f8ac161df5bb57063f55fd55043dfed6b627",
                 "shasum": ""
             },
             "require": {
@@ -13730,9 +13730,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vinicius-o-souza/pokemon_api/issues",
-                "source": "https://github.com/vinicius-o-souza/pokemon_api/tree/v4.2"
+                "source": "https://github.com/vinicius-o-souza/pokemon_api/tree/v4.3"
             },
-            "time": "2026-03-23T23:54:23+00:00"
+            "time": "2026-03-26T21:03:27+00:00"
         },
         {
             "name": "yethee/tiktoken",

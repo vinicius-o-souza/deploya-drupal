@@ -1,0 +1,25 @@
+uuid: 2126a22a-9a7e-42ba-ae44-68d8c84b83a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_experience
+    - node.type.pokemon
+_core:
+  default_config_hash: eNf-RocCl9wKZO-Eus0ccEO1gddsHKDxhDSXILy8hdo
+id: node.pokemon.field_pokemon_experience
+field_name: field_pokemon_experience
+entity_type: node
+bundle: pokemon
+label: Experience
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

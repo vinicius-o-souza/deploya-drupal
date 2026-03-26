@@ -1,0 +1,22 @@
+uuid: 3e682e2c-e7e1-4d0a-bd23-36b39a0970a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: TMkoaX4vgDNV8xGwZBVOvg4Ez0FKUYen0mZwkk4TkJw
+id: node.field_pokeapi_id
+field_name: field_pokeapi_id
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

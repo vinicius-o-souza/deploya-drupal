@@ -1,0 +1,62 @@
+uuid: c8181db2-0ec1-45ff-b30d-17a45199bcca
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pokemon.field_description
+    - field.field.node.pokemon.field_pokeapi_id
+    - field.field.node.pokemon.field_pokemon_abilities
+    - field.field.node.pokemon.field_pokemon_evolutions
+    - field.field.node.pokemon.field_pokemon_experience
+    - field.field.node.pokemon.field_pokemon_generation
+    - field.field.node.pokemon.field_pokemon_height
+    - field.field.node.pokemon.field_pokemon_legendary
+    - field.field.node.pokemon.field_pokemon_moves
+    - field.field.node.pokemon.field_pokemon_mythical
+    - field.field.node.pokemon.field_pokemon_order
+    - field.field.node.pokemon.field_pokemon_stats
+    - field.field.node.pokemon.field_pokemon_types
+    - field.field.node.pokemon.field_pokemon_weight
+    - node.type.pokemon
+  module:
+    - user
+_core:
+  default_config_hash: R9EMCJL0QoVf8yLcrYmU0UMEk1Mn8aSC-ZbzuUdXRbs
+id: node.pokemon.teaser
+targetEntityType: node
+bundle: pokemon
+mode: teaser
+content:
+  field_pokeapi_id:
+    type: number_integer
+    label: visually_hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_pokemon_types:
+    type: entity_reference_label
+    label: visually_hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_description: true
+  field_pokemon_abilities: true
+  field_pokemon_evolutions: true
+  field_pokemon_experience: true
+  field_pokemon_generation: true
+  field_pokemon_height: true
+  field_pokemon_legendary: true
+  field_pokemon_moves: true
+  field_pokemon_mythical: true
+  field_pokemon_order: true
+  field_pokemon_stats: true
+  field_pokemon_weight: true
+  links: true
+  search_api_excerpt: true

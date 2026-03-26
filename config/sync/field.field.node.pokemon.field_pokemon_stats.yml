@@ -1,0 +1,33 @@
+uuid: 32b548ad-c791-40fc-9a2d-4a065be5cdee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_stats
+    - node.type.pokemon
+    - paragraphs.paragraphs_type.pokemon_stats
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 57_0jtC2H4iRqLgLpoebLUTewHm8OIBMZakC_vx4XeI
+id: node.pokemon.field_pokemon_stats
+field_name: field_pokemon_stats
+entity_type: node
+bundle: pokemon
+label: 'Base Stats'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      pokemon_stats: pokemon_stats
+    negate: 0
+    target_bundles_drag_drop:
+      pokemon_stats:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

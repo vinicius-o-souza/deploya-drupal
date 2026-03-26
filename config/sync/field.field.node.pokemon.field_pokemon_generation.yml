@@ -1,0 +1,31 @@
+uuid: a30141d8-46c0-4f3d-afcd-0f9926d7fa38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_generation
+    - node.type.pokemon
+    - taxonomy.vocabulary.pokemon_generation
+_core:
+  default_config_hash: bou8SrBVP9utjeOGeEgRuxgARRWwCUFhXtApL5oSLRI
+id: node.pokemon.field_pokemon_generation
+field_name: field_pokemon_generation
+entity_type: node
+bundle: pokemon
+label: Generation
+description: 'The generation this pokemon was introduced in.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pokemon_generation: pokemon_generation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

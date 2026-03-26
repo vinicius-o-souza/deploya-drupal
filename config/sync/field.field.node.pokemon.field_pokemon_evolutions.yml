@@ -1,0 +1,30 @@
+uuid: 57244e03-5b40-47d7-8bda-bc4ff3dc3ecd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_evolutions
+    - node.type.pokemon
+_core:
+  default_config_hash: pC9BuxZHkEiQ_OcF-f3TlK16bq4NtV9qsNx7eGRCGTo
+id: node.pokemon.field_pokemon_evolutions
+field_name: field_pokemon_evolutions
+entity_type: node
+bundle: pokemon
+label: Evolutions
+description: 'Evolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pokemon: pokemon
+    sort:
+      field: field_pokemon_weight
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

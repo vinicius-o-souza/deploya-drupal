@@ -1,0 +1,22 @@
+uuid: 50e1e299-ce02-469d-a92c-8dc9d9566c9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - search_api_exclude
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  search_api_exclude:
+    enabled: true
+_core:
+  default_config_hash: QjGx3Jr2TzvEPbsHLIP--6vVzl7B3ZglsXkUcgKnL7Y
+name: Pokemon
+type: pokemon
+description: 'The pokemon content type to save pokemon data'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

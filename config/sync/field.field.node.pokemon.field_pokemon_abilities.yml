@@ -1,0 +1,31 @@
+uuid: f7d9d74d-457f-4a28-a053-f295ad2e4340
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_abilities
+    - node.type.pokemon
+    - taxonomy.vocabulary.pokemon_ability
+_core:
+  default_config_hash: TVy2D2psDeJnzp8j29i1G_Z3dffObyvD-A_ycblPIK4
+id: node.pokemon.field_pokemon_abilities
+field_name: field_pokemon_abilities
+entity_type: node
+bundle: pokemon
+label: Abilities
+description: 'Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pokemon_ability: pokemon_ability
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

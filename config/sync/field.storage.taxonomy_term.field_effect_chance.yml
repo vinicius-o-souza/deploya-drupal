@@ -1,0 +1,22 @@
+uuid: 84692576-9683-4dce-8760-259a3d38a5ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: xF-Z_6UDHqLkq6crTBeYG6D2bEUtZtJVHcDr5HVa6Aw
+id: taxonomy_term.field_effect_chance
+field_name: field_effect_chance
+entity_type: taxonomy_term
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

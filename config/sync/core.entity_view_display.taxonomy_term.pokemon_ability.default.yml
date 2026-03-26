@@ -1,0 +1,26 @@
+uuid: ae40a75b-ddbc-41b4-afd3-efad9021cc39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.pokemon_ability.field_pokeapi_id
+    - taxonomy.vocabulary.pokemon_ability
+  module:
+    - text
+_core:
+  default_config_hash: p8Uv6MC3Mk4BxFbJaedu28kagvYJylf-xU4c6q3iYjs
+id: taxonomy_term.pokemon_ability.default
+targetEntityType: taxonomy_term
+bundle: pokemon_ability
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_pokeapi_id: true
+  search_api_excerpt: true

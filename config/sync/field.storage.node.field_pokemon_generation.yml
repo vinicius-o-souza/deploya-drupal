@@ -1,0 +1,22 @@
+uuid: 801cb4f6-1ab2-447e-97c8-7d1161a73d9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: JQDQW-O1rOFLbRYqzrFMQ1l3pxBa_DNZCTbwhlxrxYs
+id: node.field_pokemon_generation
+field_name: field_pokemon_generation
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

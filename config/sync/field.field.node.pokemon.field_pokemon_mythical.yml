@@ -1,0 +1,25 @@
+uuid: 0c26ef08-b646-472f-830e-4a50d381a86b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_mythical
+    - node.type.pokemon
+_core:
+  default_config_hash: RueRH1sxTjWftTNXcicYwzD37dpsR0SEifEUqvlidMw
+id: node.pokemon.field_pokemon_mythical
+field_name: field_pokemon_mythical
+entity_type: node
+bundle: pokemon
+label: Mythical
+description: 'Whether or not this is a mythical Pokémon.'
+required: true
+translatable: false
+default_value:
+  -
+    value: false
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

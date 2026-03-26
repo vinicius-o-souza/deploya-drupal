@@ -1,0 +1,31 @@
+uuid: 595534b6-0591-4a7c-aa8b-671cde28ff9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_type
+    - taxonomy.vocabulary.pokemon_move
+    - taxonomy.vocabulary.pokemon_type
+_core:
+  default_config_hash: cuVKeOs3RlQzjjEsBZfvh9-zfIStdSsX8b5zokcRagI
+id: taxonomy_term.pokemon_move.field_type
+field_name: field_type
+entity_type: taxonomy_term
+bundle: pokemon_move
+label: Type
+description: 'The elemental type of this move.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pokemon_type: pokemon_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

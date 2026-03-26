@@ -1,0 +1,32 @@
+uuid: c791fef2-c3f7-4be6-8e50-933d4cf6860b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: IF1sqCm3KYtQQxEOUc5B4Cgl7PruAJjg2hjRTowdibU
+id: paragraph.field_pokemon_learn_method
+field_name: field_pokemon_learn_method
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: egg
+      label: Egg
+    -
+      value: level_up
+      label: 'Level Up'
+    -
+      value: machine
+      label: Machine
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

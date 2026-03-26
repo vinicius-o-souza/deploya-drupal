@@ -1,0 +1,22 @@
+uuid: e14162a0-6ac3-49d5-9bf1-4482d0217e5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: tZGN0ZnuqHGfGGFajB1VzyBt54hj5Z_9mIO7TXkSVec
+id: paragraph.field_pokemon_base_stat
+field_name: field_pokemon_base_stat
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

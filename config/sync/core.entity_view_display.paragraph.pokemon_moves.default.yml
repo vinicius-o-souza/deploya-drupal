@@ -1,0 +1,34 @@
+uuid: 8862671d-737a-4b68-a081-08055e27a03d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pokemon_moves.field_pokemon_learn_method
+    - field.field.paragraph.pokemon_moves.field_pokemon_move
+    - paragraphs.paragraphs_type.pokemon_moves
+  module:
+    - options
+_core:
+  default_config_hash: NpajxID4ktYvV6DBMUboe9nv6ueWPC0VzzIOtE917PY
+id: paragraph.pokemon_moves.default
+targetEntityType: paragraph
+bundle: pokemon_moves
+mode: default
+content:
+  field_pokemon_learn_method:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_pokemon_move:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true
