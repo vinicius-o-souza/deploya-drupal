@@ -1,0 +1,68 @@
+uuid: f1cb8075-6ea2-49cb-9a48-ec1b94ae5c6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.pokemon_ability.field_pokeapi_id
+    - taxonomy.vocabulary.pokemon_ability
+  module:
+    - path
+    - text
+_core:
+  default_config_hash: FnW022Hmbvpl8pCgkJUg9RpsUfSOy4lQMkPNoXiALNE
+id: taxonomy_term.pokemon_ability.default
+targetEntityType: taxonomy_term
+bundle: pokemon_ability
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_pokeapi_id:
+    type: number
+    weight: 101
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

@@ -1,0 +1,22 @@
+uuid: 7e09f500-3592-4392-ae95-6645d56170b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: '-mSHgKgVM_C3t1zqYSkUAYf3x5_5Uv9FsCTfSbRUhcI'
+id: node.field_pokemon_height
+field_name: field_pokemon_height
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

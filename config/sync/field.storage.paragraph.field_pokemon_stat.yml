@@ -1,0 +1,22 @@
+uuid: bb59b57e-7305-4919-8e26-69f0655851e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+_core:
+  default_config_hash: rhh8owuoMgRV9AmJNQF3CsAd8X-zNTWsIsAMBqAAMII
+id: paragraph.field_pokemon_stat
+field_name: field_pokemon_stat
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

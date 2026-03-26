@@ -1,0 +1,22 @@
+uuid: ecd6e35b-0d08-4f83-a7f8-9ac4183787ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: UEVh1cTmPlhHPlfttioVxOhwfT1uOipwREajkG3CU8M
+id: taxonomy_term.field_power_points
+field_name: field_power_points
+entity_type: taxonomy_term
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

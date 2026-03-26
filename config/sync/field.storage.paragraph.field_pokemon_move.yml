@@ -1,0 +1,22 @@
+uuid: d7d1d1ac-bcf5-41ee-a15e-ea5423f1ceed
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+_core:
+  default_config_hash: LV9qFvDJxL_ioCmll1v70Ww5mM99XS1mKSCfvvM1LhU
+id: paragraph.field_pokemon_move
+field_name: field_pokemon_move
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

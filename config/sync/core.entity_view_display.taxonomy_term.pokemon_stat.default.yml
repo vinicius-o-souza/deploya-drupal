@@ -1,0 +1,26 @@
+uuid: 07699bac-e610-4ba2-836b-e6b60496d903
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.pokemon_stat.field_pokeapi_id
+    - taxonomy.vocabulary.pokemon_stat
+  module:
+    - text
+_core:
+  default_config_hash: cy6TAvrEPyFPoBNh58s9dhOjckVA8YZ09_ORnjYoPtA
+id: taxonomy_term.pokemon_stat.default
+targetEntityType: taxonomy_term
+bundle: pokemon_stat
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_pokeapi_id: true
+  search_api_excerpt: true

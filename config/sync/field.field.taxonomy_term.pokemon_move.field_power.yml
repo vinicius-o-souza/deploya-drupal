@@ -1,0 +1,25 @@
+uuid: 7095ef36-25d8-4fb9-8203-e6faf276c429
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_power
+    - taxonomy.vocabulary.pokemon_move
+_core:
+  default_config_hash: tm4S5xveklnaAV2DdX9AmyAtpEgJQZMLbjoSw0zn3x4
+id: taxonomy_term.pokemon_move.field_power
+field_name: field_power
+entity_type: taxonomy_term
+bundle: pokemon_move
+label: Power
+description: 'The base power of this move with a value of 0 if it does not have a base power.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

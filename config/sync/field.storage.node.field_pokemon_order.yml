@@ -1,0 +1,22 @@
+uuid: 76cc0c26-663f-469a-b7d5-f4cf08cd5af3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: MJEWqz7guSUMUisQmkMi8b6dQf9LjsSmpuUjxP-jbKE
+id: node.field_pokemon_order
+field_name: field_pokemon_order
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

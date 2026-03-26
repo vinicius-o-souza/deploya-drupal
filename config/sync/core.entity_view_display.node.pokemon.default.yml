@@ -1,0 +1,148 @@
+uuid: ff40759a-7afd-423f-b1fb-28565fdb0746
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pokemon.field_description
+    - field.field.node.pokemon.field_pokeapi_id
+    - field.field.node.pokemon.field_pokemon_abilities
+    - field.field.node.pokemon.field_pokemon_evolutions
+    - field.field.node.pokemon.field_pokemon_experience
+    - field.field.node.pokemon.field_pokemon_generation
+    - field.field.node.pokemon.field_pokemon_height
+    - field.field.node.pokemon.field_pokemon_legendary
+    - field.field.node.pokemon.field_pokemon_moves
+    - field.field.node.pokemon.field_pokemon_mythical
+    - field.field.node.pokemon.field_pokemon_order
+    - field.field.node.pokemon.field_pokemon_stats
+    - field.field.node.pokemon.field_pokemon_types
+    - field.field.node.pokemon.field_pokemon_weight
+    - node.type.pokemon
+  module:
+    - entity_reference_revisions
+    - user
+_core:
+  default_config_hash: VYoNjEjz874DWjkVIAqMx589rlyG5aLlQQUk7WfP5jk
+id: node.pokemon.default
+targetEntityType: node
+bundle: pokemon
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_pokeapi_id:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pokemon_abilities:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_pokemon_evolutions:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_pokemon_generation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_pokemon_height:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_pokemon_legendary:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_pokemon_moves:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_pokemon_mythical:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_pokemon_stats:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_pokemon_types:
+    type: entity_reference_label
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_pokemon_weight:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_pokemon_experience: true
+  field_pokemon_order: true
+  search_api_excerpt: true

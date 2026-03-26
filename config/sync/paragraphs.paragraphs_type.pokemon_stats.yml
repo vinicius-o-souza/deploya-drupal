@@ -1,0 +1,12 @@
+uuid: 088980d2-10b8-4ee7-857d-6c22e32dd972
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LM0M5GQ-CoHy0uCz_204NvJxuE7_fadzGt3j_j1LEDg
+id: pokemon_stats
+label: 'Pokemon Stats'
+icon_uuid: null
+icon_default: null
+description: 'Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.'
+behavior_plugins: {  }

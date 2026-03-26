@@ -1,0 +1,22 @@
+uuid: daf1ff74-f676-4295-8fc0-f1240fc0e88f
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: JwBqI_lWCHtQxn_SYpsGm5JPLdXIyffbjojaSin0gwk
+id: taxonomy_term.field_power
+field_name: field_power
+entity_type: taxonomy_term
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

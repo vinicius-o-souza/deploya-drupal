@@ -1,0 +1,11 @@
+uuid: 5e074ba6-9777-4177-b537-51548e398409
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hygR0C6hZuE0MrOGipvHUersGodKTSM80UkDKtydm-Y
+name: 'Pokemon Type'
+vid: pokemon_type
+description: 'Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective a'
+weight: 0
+new_revision: false

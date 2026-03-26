@@ -1,0 +1,22 @@
+uuid: 30b79525-e782-47bb-ae44-b3a41396a24c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: j4hV-ypNQVtkMhepQTBvkYuHwRZz-LOrPaBmGKvDLOw
+id: node.field_pokemon_weight
+field_name: field_pokemon_weight
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

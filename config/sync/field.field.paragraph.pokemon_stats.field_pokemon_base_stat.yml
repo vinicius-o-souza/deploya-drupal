@@ -1,0 +1,25 @@
+uuid: f04cd065-369c-4d83-a166-67d3c0465a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pokemon_base_stat
+    - paragraphs.paragraphs_type.pokemon_stats
+_core:
+  default_config_hash: URoponnAAZor4j3ZWeFE3FDvEJfdIJFhoocpD0MXcac
+id: paragraph.pokemon_stats.field_pokemon_base_stat
+field_name: field_pokemon_base_stat
+entity_type: paragraph
+bundle: pokemon_stats
+label: 'Base Stat'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 255
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,25 @@
+uuid: 581ecfaa-06fc-417d-aca5-442bca920b1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokeapi_id
+    - node.type.pokemon
+_core:
+  default_config_hash: JxXf62psRUKBXfCgMOxckODKlC4wdzbfcOBeT8hzgEY
+id: node.pokemon.field_pokeapi_id
+field_name: field_pokeapi_id
+entity_type: node
+bundle: pokemon
+label: 'PokeApi Id'
+description: 'The id of the pokemon in the PokeApi'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

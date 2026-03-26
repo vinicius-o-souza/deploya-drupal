@@ -1,0 +1,31 @@
+uuid: ba4416af-5f32-4309-84f3-49ba3764de5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pokemon_stat
+    - paragraphs.paragraphs_type.pokemon_stats
+    - taxonomy.vocabulary.pokemon_stat
+_core:
+  default_config_hash: BJDurXpik3Hh_d7mG7LGnx4_7KrnBDOkLJtiEBzl0AY
+id: paragraph.pokemon_stats.field_pokemon_stat
+field_name: field_pokemon_stat
+entity_type: paragraph
+bundle: pokemon_stats
+label: Stat
+description: 'Select the stat that you want to add a value to the pokemon.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pokemon_stat: pokemon_stat
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

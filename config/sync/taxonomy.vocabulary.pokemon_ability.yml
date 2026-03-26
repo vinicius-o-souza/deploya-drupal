@@ -1,0 +1,11 @@
+uuid: 24c1ffcd-b7fb-44f1-9788-766e493cdf8b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: w8G_1yYu5VGBs6zai0ntbr1x4-LvvH70rphiVvtRXOU
+name: 'Pokemon Abilities'
+vid: pokemon_ability
+description: 'Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can ha'
+weight: 0
+new_revision: false

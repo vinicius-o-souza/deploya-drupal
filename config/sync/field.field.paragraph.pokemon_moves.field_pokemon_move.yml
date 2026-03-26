@@ -1,0 +1,31 @@
+uuid: cbb12e16-ae92-46f5-a081-e3844f09415c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pokemon_move
+    - paragraphs.paragraphs_type.pokemon_moves
+    - taxonomy.vocabulary.pokemon_move
+_core:
+  default_config_hash: 9WLV8kZDl93Znaw8wGoRCtBhSqMURrMWwQAsNUutlmY
+id: paragraph.pokemon_moves.field_pokemon_move
+field_name: field_pokemon_move
+entity_type: paragraph
+bundle: pokemon_moves
+label: Move
+description: 'The move that the Pokémon has.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pokemon_move: pokemon_move
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

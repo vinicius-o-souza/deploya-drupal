@@ -1,0 +1,25 @@
+uuid: b871a7c8-25d6-42db-ab54-2f712b7ede6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pokeapi_id
+    - taxonomy.vocabulary.pokemon_stat
+_core:
+  default_config_hash: smfr3a4fLEnpV_N7BlPH_vF8R_IBbH9rI15-XUAB9P4
+id: taxonomy_term.pokemon_stat.field_pokeapi_id
+field_name: field_pokeapi_id
+entity_type: taxonomy_term
+bundle: pokemon_stat
+label: 'PokeApi Id'
+description: "The id of the resource in the PokeApi\r\nhttps://pokeapi.co/"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

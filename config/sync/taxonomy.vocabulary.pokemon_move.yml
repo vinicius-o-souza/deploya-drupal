@@ -1,0 +1,11 @@
+uuid: 270d5048-54de-4131-be89-a172d1dee508
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0KfhNli75dgQg_MgFs65QlpFvA22o9rX4tjwULpEKD8
+name: 'Pokemon Moves'
+vid: pokemon_move
+description: 'Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by '
+weight: 0
+new_revision: false

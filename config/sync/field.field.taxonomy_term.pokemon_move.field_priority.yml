@@ -1,0 +1,25 @@
+uuid: afb82920-52ba-4cbf-8401-de373e033ea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_priority
+    - taxonomy.vocabulary.pokemon_move
+_core:
+  default_config_hash: hsZEqmENyxChXhoP840-sBIcXBxhexrXiGavp1qKMIA
+id: taxonomy_term.pokemon_move.field_priority
+field_name: field_priority
+entity_type: taxonomy_term
+bundle: pokemon_move
+label: Priority
+description: 'A value between -8 and 8. Sets the order in which moves are executed during battle. See Bulbapedia for greater detail.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: -8
+  max: 8
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,11 @@
+uuid: e87e5a37-2325-4df5-8e0d-babe065c0a8c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gQXfcoe7Uc1RsUZCdsaPA1zqOJ22Wyb3ASz9gIhF6AQ
+name: 'Pokemon Generation'
+vid: pokemon_generation
+description: 'A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include.'
+weight: 0
+new_revision: false

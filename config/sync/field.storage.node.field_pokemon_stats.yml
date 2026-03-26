@@ -1,0 +1,23 @@
+uuid: fa5bc307-8fec-4df0-9dc6-99a6629723aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+_core:
+  default_config_hash: wZ9GzSZpSXfx0Qf1YSbxPuG-62ppq57T6dG2hcwgYPw
+id: node.field_pokemon_stats
+field_name: field_pokemon_stats
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 8
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

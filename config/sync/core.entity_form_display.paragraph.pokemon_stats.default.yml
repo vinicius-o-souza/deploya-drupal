@@ -1,0 +1,31 @@
+uuid: fa2fa2c3-64c1-4420-843b-83e992f44838
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pokemon_stats.field_pokemon_base_stat
+    - field.field.paragraph.pokemon_stats.field_pokemon_stat
+    - paragraphs.paragraphs_type.pokemon_stats
+_core:
+  default_config_hash: XAmHx1hVEQmVHBGNoXl2IB7odt7kLANzf4dj3_5ny-I
+id: paragraph.pokemon_stats.default
+targetEntityType: paragraph
+bundle: pokemon_stats
+mode: default
+content:
+  field_pokemon_base_stat:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_pokemon_stat:
+    type: options_buttons
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

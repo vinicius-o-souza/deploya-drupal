@@ -1,0 +1,22 @@
+uuid: 066ec450-b19a-462b-a7b1-6cd025747cd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: HzzwhkqhgzAKxXjLYC0uAlgCQiyUrwgpmD3LvKUePHs
+id: node.field_pokemon_abilities
+field_name: field_pokemon_abilities
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
