@@ -31,10 +31,10 @@ content:
   field_description:
     type: basic_string
     label: above
-    weight: 2
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_pokeapi_id:
     type: number_integer
     label: hidden

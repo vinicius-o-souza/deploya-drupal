@@ -6,9 +6,20 @@ dependencies:
     - views.view.recent_pages
   module:
     - views
-active_version: f1872d6bfd3192fc
+active_version: 62434fb4a6aaf4b1
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: 'views_block:recent_pages-block_recent_pages'
+        label: 'Recent pages'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+  f1872d6bfd3192fc:
     settings:
       default_settings:
         id: 'views_block:recent_pages-block_recent_pages'

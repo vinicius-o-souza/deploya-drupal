@@ -4,9 +4,23 @@ status: false
 dependencies:
   module:
     - project_browser
-active_version: ed4dec4bb3315378
+active_version: 97ac3c2f798d90b2
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: 'project_browser_block:recommended'
+        label: 'Recommended add-ons'
+        label_display: '0'
+        provider: project_browser
+        paginate: true
+        page_sizes: '12, 24, 36, 48'
+        sort_options: null
+        default_sort: null
+        filters: null
+    fallback_metadata:
+      slot_definitions: null
+  ed4dec4bb3315378:
     settings:
       default_settings:
         id: 'project_browser_block:recommended'
