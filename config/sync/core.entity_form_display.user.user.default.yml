@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.user.user.user_picture
   module:
-    - path
     - user
 _core:
   default_config_hash: Yj33guGRXeB-uq182k6bwtAUtKGpO17nkYxn8FnjhBM
@@ -19,21 +18,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  language:
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  path:
-    type: path
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  timezone:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  language: true
+  path: true
+  timezone: true
   user_picture: true
