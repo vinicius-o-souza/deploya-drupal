@@ -1,23 +1,19 @@
-uuid: 577d5516-06f7-4894-ada4-bb7c375a4586
+uuid: 0a587e49-b565-4756-818b-17786173856b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_description
     - node.type.pokemon
-  module:
-    - text
-_core:
-  default_config_hash: FwMKHAfsv_XAoMetEkZqxQ7EWxr3D27A4ZJR-E6CvsE
 id: node.pokemon.field_description
 field_name: field_description
 entity_type: node
 bundle: pokemon
 label: Description
 description: ''
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: string_long

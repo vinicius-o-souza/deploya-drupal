@@ -1,0 +1,55 @@
+uuid: 2f6cc504-8077-45c1-9fac-695df813bb4a
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.pokemon.field_description
+    - field.field.node.pokemon.field_pokeapi_id
+    - field.field.node.pokemon.field_pokemon_abilities
+    - field.field.node.pokemon.field_pokemon_evolutions
+    - field.field.node.pokemon.field_pokemon_experience
+    - field.field.node.pokemon.field_pokemon_generation
+    - field.field.node.pokemon.field_pokemon_height
+    - field.field.node.pokemon.field_pokemon_legendary
+    - field.field.node.pokemon.field_pokemon_moves
+    - field.field.node.pokemon.field_pokemon_mythical
+    - field.field.node.pokemon.field_pokemon_order
+    - field.field.node.pokemon.field_pokemon_stats
+    - field.field.node.pokemon.field_pokemon_types
+    - field.field.node.pokemon.field_pokemon_weight
+    - node.type.pokemon
+  module:
+    - user
+id: node.pokemon.card
+targetEntityType: node
+bundle: pokemon
+mode: card
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_pokeapi_id: true
+  field_pokemon_abilities: true
+  field_pokemon_evolutions: true
+  field_pokemon_experience: true
+  field_pokemon_generation: true
+  field_pokemon_height: true
+  field_pokemon_legendary: true
+  field_pokemon_moves: true
+  field_pokemon_mythical: true
+  field_pokemon_order: true
+  field_pokemon_stats: true
+  field_pokemon_types: true
+  field_pokemon_weight: true
+  search_api_excerpt: true

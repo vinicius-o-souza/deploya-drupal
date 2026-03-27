@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_pokemon_types
     - node.type.pokemon
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.pokemon_type
 _core:
   default_config_hash: ioLj0R5jn0zebewLKtO3wDRZgC2YQ3_Pl4tJoAABNAo
 id: node.pokemon.field_pokemon_types
@@ -22,7 +22,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: tags
+      pokemon_type: pokemon_type
     sort:
       field: name
       direction: asc

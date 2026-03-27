@@ -54,6 +54,7 @@ module:
   jquery_ui: 0
   jquery_ui_resizable: 0
   jsonapi: 0
+  jsonapi_defaults: 0
   jsonapi_extras: 0
   klaro: 0
   layout_builder: 0

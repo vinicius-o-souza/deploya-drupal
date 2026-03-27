@@ -4,6 +4,14 @@ status: true
 dependencies:
   config:
     - node.type.pokemon
+  module:
+    - jsonapi_defaults
+third_party_settings:
+  jsonapi_defaults:
+    default_sorting:
+      'sort:orderSort#path': field_pokemon_order
+      'sort:orderSort#direction': ASC
+    page_limit: 50
 id: node--pokemon
 disabled: false
 path: node/pokemon
@@ -16,7 +24,7 @@ resourceFields:
     enhancer:
       id: ''
   uuid:
-    disabled: false
+    disabled: true
     fieldName: uuid
     publicName: uuid
     enhancer:
@@ -34,7 +42,7 @@ resourceFields:
     enhancer:
       id: ''
   type:
-    disabled: false
+    disabled: true
     fieldName: type
     publicName: type
     enhancer:
@@ -58,13 +66,13 @@ resourceFields:
     enhancer:
       id: ''
   status:
-    disabled: false
+    disabled: true
     fieldName: status
     publicName: status
     enhancer:
       id: ''
   uid:
-    disabled: false
+    disabled: true
     fieldName: uid
     publicName: uid
     enhancer:
@@ -190,13 +198,13 @@ resourceFields:
     enhancer:
       id: ''
   field_pokemon_abilities:
-    disabled: false
+    disabled: true
     fieldName: field_pokemon_abilities
     publicName: field_pokemon_abilities
     enhancer:
       id: ''
   field_pokemon_evolutions:
-    disabled: false
+    disabled: true
     fieldName: field_pokemon_evolutions
     publicName: field_pokemon_evolutions
     enhancer:
@@ -208,7 +216,7 @@ resourceFields:
     enhancer:
       id: ''
   field_pokemon_generation:
-    disabled: false
+    disabled: true
     fieldName: field_pokemon_generation
     publicName: field_pokemon_generation
     enhancer:
@@ -226,7 +234,7 @@ resourceFields:
     enhancer:
       id: ''
   field_pokemon_moves:
-    disabled: false
+    disabled: true
     fieldName: field_pokemon_moves
     publicName: field_pokemon_moves
     enhancer:
@@ -244,7 +252,7 @@ resourceFields:
     enhancer:
       id: ''
   field_pokemon_stats:
-    disabled: false
+    disabled: true
     fieldName: field_pokemon_stats
     publicName: field_pokemon_stats
     enhancer:
