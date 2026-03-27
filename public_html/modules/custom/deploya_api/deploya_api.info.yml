@@ -1,0 +1,8 @@
+name: 'Deploya API'
+type: module
+description: 'Configures and extends the decoupled API layer: JSON:API, CORS, and Simple OAuth 2.0 integration.'
+package: 'Deploya'
+core_version_requirement: ^11
+dependencies:
+  - drupal:user
+  - simple_oauth:simple_oauth

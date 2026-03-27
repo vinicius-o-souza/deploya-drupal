@@ -16,6 +16,7 @@ dependencies:
     - navigation
     - node
     - node_view_permissions
+    - simple_oauth
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -31,6 +32,7 @@ permissions:
   - 'access navigation'
   - 'bypass honeypot protection'
   - 'delete own files'
+  - 'grant simple_oauth codes'
   - 'skip CAPTCHA'
   - 'use klaro'
   - 'use text format webform_default'

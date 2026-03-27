@@ -4,12 +4,10 @@ status: true
 dependencies:
   module:
     - node_view_permissions
-    - simple_oauth
 id: pokedex
 label: 'Pokedex user'
 weight: 4
 is_admin: false
 permissions:
-  - 'grant simple_oauth codes'
   - 'view any pokemon content'
   - 'view own pokemon content'

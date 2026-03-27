@@ -23,6 +23,7 @@ module:
   dashboard: 0
   datetime: 0
   dblog: 0
+  deploya_api: 0
   drupal_cms_helper: 0
   drupical: 0
   dynamic_page_cache: 0
