@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   module:
+    - deploya_api
     - node_view_permissions
 id: pokedex
 label: 'Pokedex user'
 weight: 4
 is_admin: false
 permissions:
+  - 'access deploya json api'
   - 'view any pokemon content'
   - 'view own pokemon content'
