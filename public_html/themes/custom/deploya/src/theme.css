@@ -68,8 +68,8 @@
   /* Set navbar height for hero billboard overlay */
   --navbar-height: 80px;
 
-  @media (min-width: 768px) {
-    --navbar-height: 80px;
+  @media (min-width: 1280px) {
+    --navbar-height: 88px;
   }
 }
 .dark {
