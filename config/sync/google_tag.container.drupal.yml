@@ -20,12 +20,12 @@ conditions:
     negate: true
     pages: "/admin*\r\n/batch*\r\n/node/add*\r\n/node/*/edit\r\n/node/*/delete\r\n/user/*/edit*\r\n/user/*/cancel*\r\n/taxonomy/term/*/edit\r\n/taxonomy/term/*/delete"
 events:
-  search: {  }
-  custom: {  }
   generate_lead:
     value: ''
     currency: ''
-  login:
-    method: CMS
   sign_up:
     method: CMS
+  custom: {  }
+  login:
+    method: CMS
+  search: {  }

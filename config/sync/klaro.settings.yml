@@ -1,5 +1,5 @@
 langcode: en
-dialog_mode: notice_modal
+dialog_mode: manager
 auto_decorate_final_html: true
 auto_decorate_js_alter: true
 auto_decorate_page_attachments: true
@@ -28,9 +28,9 @@ library:
   group_by_purpose: true
   accept_all: true
   hide_decline_all: false
-  hide_learn_more: true
-  learn_more_as_button: false
+  hide_learn_more: false
+  learn_more_as_button: true
   additional_class: ''
   disable_powered_by: false
   html_texts: false
-  auto_focus: true
+  auto_focus: false
