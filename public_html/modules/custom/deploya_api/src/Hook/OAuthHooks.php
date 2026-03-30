@@ -4,53 +4,87 @@ declare(strict_types=1);
 
 namespace Drupal\deploya_api\Hook;
 
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Hook\Attribute\Hook;
-use Drupal\simple_oauth\Entity\Oauth2TokenInterface;
+use Drupal\Core\Messenger\MessengerInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\user\UserInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Hooks for Simple OAuth integration.
  */
 class OAuthHooks {
 
+  use StringTranslationTrait;
+
   /**
-   * Assigns the 'pokedex' role when a user authorizes the app via OAuth.
+   * Constructs an OAuthHooks instance.
    *
-   * Only auth_code tokens are checked: they are created at the moment the
-   * user clicks "Authorize" on the consent screen, making them the definitive
-   * signal that a real user went through the app's OAuth PKCE flow.
-   * Admin-created accounts and direct Drupal registrations never produce an
-   * auth_code, so they are unaffected.
-   *
-   * @param \Drupal\Core\Entity\EntityInterface $entity
-   *    The entity to be inserted.
+   * @param \Symfony\Component\HttpFoundation\RequestStack $requestStack
+   *   The request stack.
+   * @param \Drupal\Core\Messenger\MessengerInterface $messenger
+   *   The messenger service.
    */
-  #[Hook('entity_insert')]
-  public function entityInsert(EntityInterface $entity): void {
-    if (!$entity instanceof Oauth2TokenInterface) {
-      return;
+  public function __construct(
+    protected RequestStack $requestStack,
+    protected MessengerInterface $messenger,
+  ) {}
+
+  /**
+   * Implements hook_user_login().
+   *
+   * @param \Drupal\Core\Session\AccountInterface $account
+   *   The user account that has logged in.
+   */
+  #[Hook('user_login')]
+  public function userLogin(AccountInterface $account): void {
+    if ($this->hasOauthAuthorizeDestination()) {
+      if (in_array('pokedex', $account->getRoles(), TRUE)) {
+        return;
+      }
+
+      if ($account instanceof UserInterface) {
+        $account->addRole('pokedex');
+        $account->save();
+      }
+    }
+  }
+
+  /**
+   * Implements hook_form_FORM_ID_alter().
+   *
+   * @param array<string, mixed> $form
+   *   The form structure.
+   */
+  #[Hook('form_user_register_form_alter')]
+  public function userRegisterFormAlter(array &$form): void {
+    if ($this->hasOauthAuthorizeDestination()) {
+      $message = $this->t('An application is requesting access to your account. Create an account or log in to continue and grant access.');
+      $this->messenger->addStatus($message);
+    }
+  }
+
+  /**
+   * Checks if the current request has an OAuth authorize destination.
+   *
+   * @return bool
+   *   TRUE if the request destination contains '/oauth/authorize'.
+   */
+  private function hasOauthAuthorizeDestination(): bool {
+    $request = $this->requestStack->getCurrentRequest();
+    if ($request === NULL) {
+      return FALSE;
+    }
+    $query = $request->query;
+    if ($query->has('destination')) {
+      $destination = $query->get('destination', '');
+      if (str_contains($destination, '/oauth/authorize')) {
+        return TRUE;
+      }
     }
 
-    if ($entity->bundle() !== 'auth_code') {
-      return;
-    }
-
-    $user = $entity->get('auth_user_id')->entity;
-    if (!$user instanceof UserInterface) {
-      return;
-    }
-
-    if (!in_array('pokedex', $entity->getRoles(), TRUE)) {
-      return;
-    }
-
-    if ($user->hasRole('pokedex')) {
-      return;
-    }
-
-    $user->addRole('pokedex');
-    $user->save();
+    return FALSE;
   }
 
 }

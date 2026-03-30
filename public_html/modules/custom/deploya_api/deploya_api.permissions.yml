@@ -1,0 +1,4 @@
+access deploya json api:
+  title: 'Access Deploya JSON:API'
+  description: 'Grants access to all JSON:API endpoints exposed by the Deploya API module.'
+  restrict access: false

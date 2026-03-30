@@ -1,0 +1,11 @@
+parameters:
+  level: 9
+
+  paths:
+    - public_html/modules/custom
+
+  excludePaths:
+    - public_html/modules/custom/*/tests/fixtures/*
+
+  drupal:
+    drupal_root: public_html

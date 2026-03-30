@@ -5,4 +5,5 @@ package: 'Deploya'
 core_version_requirement: ^11
 dependencies:
   - drupal:user
+  - drupal:jsonapi
   - simple_oauth:simple_oauth

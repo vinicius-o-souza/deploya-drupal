@@ -1,0 +1,10 @@
+services:
+  deploya_api.oauth_session_subscriber:
+    class: Drupal\deploya_api\EventSubscriber\OAuthSessionSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  deploya_api.json_api_route_subscriber:
+    class: Drupal\deploya_api\Routing\JsonApiRouteSubscriber
+    tags:
+      - { name: event_subscriber }
